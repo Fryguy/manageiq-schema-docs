@@ -8,4 +8,4 @@ The docs are generated using [SchemaSpy](https://schemaspy.org/). A conveience s
 
 ## License
 
-The gem is available as open source under the terms of the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+This repository is available as open source under the terms of the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).

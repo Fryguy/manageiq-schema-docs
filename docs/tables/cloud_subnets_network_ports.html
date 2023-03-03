@@ -120,7 +120,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="cloud_subnet_id">cloud_subnet_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="cloud_subnet_id">cloud_subnet_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -132,12 +132,16 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="cloud_subnets_network_ports.cloud_subnet_id references cloud_subnets.id"><a href='cloud_subnets.html'>cloud_subnets</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="network_port_id">network_port_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="network_port_id">network_port_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -149,6 +153,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="cloud_subnets_network_ports.network_port_id references network_ports.id"><a href='network_ports.html'>network_ports</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -222,10 +230,53 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="cloud_subnets_network_ports.html" target="_top" title="cloud_subnets_network_ports" alt="" coords="365,144,817,331">
+<area shape="rect" id="node2" href="cloud_subnets.html" target="_top" title="cloud_subnets" alt="" coords="5,5,321,357">
+<area shape="rect" id="node3" href="network_ports.html" target="_top" title="network_ports" alt="" coords="19,375,308,668">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/cloud_subnets_network_ports.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="cloud_networks.html" target="_top" title="cloud_networks" alt="" coords="259,761,465,849">
+<area shape="rect" id="node2" href="cloud_tenants.html" target="_top" title="cloud_tenants" alt="" coords="13,881,207,969">
+<area shape="rect" id="node3" href="resource_groups.html" target="_top" title="resource_groups" alt="" coords="5,761,215,849">
+<area shape="rect" id="node4" href="cloud_subnets.html" target="_top" title="cloud_subnets" alt="" coords="775,484,1091,836">
+<area shape="rect" id="node5" href="availability_zones.html" target="_top" title="availability_zones" alt="" coords="509,624,731,712">
+<area shape="rect" id="node6" href="network_groups.html" target="_top" title="network_groups" alt="" coords="259,592,465,680">
+<area shape="rect" id="node7" href="network_routers.html" target="_top" title="network_routers" alt="" coords="514,519,726,607">
+<area shape="rect" id="node8" href="cloud_subnets_network_ports.html" target="_top" title="cloud_subnets_network_ports" alt="" coords="1468,291,1920,477">
+<area shape="rect" id="node9" href="network_ports.html" target="_top" title="network_ports" alt="" coords="1135,5,1424,299">
+<area shape="rect" id="node10" href="floating_ips.html" target="_top" title="floating_ips" alt="" coords="1608,800,1780,888">
+<area shape="rect" id="node11" href="vms.html" target="_top" title="vms" alt="" coords="1221,889,1338,977">
+<area shape="rect" id="node12" href="load_balancer_pool_members.html" target="_top" title="load_balancer_pool_members" alt="" coords="1539,905,1849,993">
+<area shape="rect" id="node13" href="network_ports_security_groups.html" target="_top" title="network_ports_security_groups" alt="" coords="1533,68,1855,156">
+<area shape="rect" id="node14" href="security_groups.html" target="_top" title="security_groups" alt="" coords="1177,316,1382,404">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/cloud_subnets_network_ports.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

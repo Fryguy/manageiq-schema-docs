@@ -111,6 +111,14 @@
                                     <td>nextval(&#39;scan_items_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="filesystems.scan_item_id references scan_items.id"><a href='filesystems.html'>filesystems</a><span class='relatedKey'>.scan_item_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="registry_items.scan_item_id references scan_items.id"><a href='registry_items.html'>registry_items</a><span class='relatedKey'>.scan_item_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -358,10 +366,44 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="filesystems.html" target="_top" title="filesystems" alt="" coords="367,5,607,269">
+<area shape="rect" id="node2" href="scan_items.html" target="_top" title="scan_items" alt="" coords="5,201,323,623">
+<area shape="rect" id="node3" href="registry_items.html" target="_top" title="registry_items" alt="" coords="387,287,586,492">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/scan_items.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="filesystems.html" target="_top" title="filesystems" alt="" coords="367,228,607,492">
+<area shape="rect" id="node2" href="host_service_groups.html" target="_top" title="host_service_groups" alt="" coords="46,581,282,669">
+<area shape="rect" id="node3" href="miq_sets.html" target="_top" title="miq_sets" alt="" coords="88,37,240,125">
+<area shape="rect" id="node4" href="scan_items.html" target="_top" title="scan_items" alt="" coords="5,143,323,564">
+<area shape="rect" id="node5" href="registry_items.html" target="_top" title="registry_items" alt="" coords="387,5,586,211">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/scan_items.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

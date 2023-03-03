@@ -1276,7 +1276,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="time_profile_id">time_profile_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="time_profile_id">time_profile_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -1288,6 +1288,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="metrics_21.time_profile_id references time_profiles.id"><a href='time_profiles.html'>time_profiles</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -1449,10 +1453,79 @@
                             </table>
                         </div>
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="metrics_21.html" target="_top" title="metrics_21" alt="" coords="257,5,801,2275">
+<area shape="rect" id="node2" href="time_profiles.html" target="_top" title="time_profiles" alt="" coords="5,2032,213,2149">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/metrics_21.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="metric_rollups_01.html" target="_top" title="metric_rollups_01" alt="" coords="419,5,639,93">
+<area shape="rect" id="node2" href="time_profiles.html" target="_top" title="time_profiles" alt="" coords="5,2057,213,2175">
+<area shape="rect" id="node3" href="metric_rollups_02.html" target="_top" title="metric_rollups_02" alt="" coords="419,111,639,199">
+<area shape="rect" id="node4" href="metric_rollups_03.html" target="_top" title="metric_rollups_03" alt="" coords="419,216,639,304">
+<area shape="rect" id="node5" href="metric_rollups_04.html" target="_top" title="metric_rollups_04" alt="" coords="419,321,639,409">
+<area shape="rect" id="node6" href="metric_rollups_05.html" target="_top" title="metric_rollups_05" alt="" coords="419,427,639,515">
+<area shape="rect" id="node7" href="metric_rollups_06.html" target="_top" title="metric_rollups_06" alt="" coords="419,532,639,620">
+<area shape="rect" id="node8" href="metric_rollups_07.html" target="_top" title="metric_rollups_07" alt="" coords="419,637,639,725">
+<area shape="rect" id="node9" href="metric_rollups_08.html" target="_top" title="metric_rollups_08" alt="" coords="419,743,639,831">
+<area shape="rect" id="node10" href="metric_rollups_09.html" target="_top" title="metric_rollups_09" alt="" coords="419,848,639,936">
+<area shape="rect" id="node11" href="metric_rollups_10.html" target="_top" title="metric_rollups_10" alt="" coords="419,953,639,1041">
+<area shape="rect" id="node12" href="metric_rollups_11.html" target="_top" title="metric_rollups_11" alt="" coords="419,1059,639,1147">
+<area shape="rect" id="node13" href="metric_rollups_12.html" target="_top" title="metric_rollups_12" alt="" coords="419,1164,639,1252">
+<area shape="rect" id="node14" href="metric_rollups_base.html" target="_top" title="metric_rollups_base" alt="" coords="411,1269,648,1357">
+<area shape="rect" id="node15" href="metrics_00.html" target="_top" title="metrics_00" alt="" coords="445,1375,613,1463">
+<area shape="rect" id="node16" href="metrics_01.html" target="_top" title="metrics_01" alt="" coords="445,1480,613,1568">
+<area shape="rect" id="node17" href="metrics_02.html" target="_top" title="metrics_02" alt="" coords="445,1585,613,1673">
+<area shape="rect" id="node18" href="metrics_03.html" target="_top" title="metrics_03" alt="" coords="445,1691,613,1779">
+<area shape="rect" id="node19" href="metrics_04.html" target="_top" title="metrics_04" alt="" coords="445,1796,613,1884">
+<area shape="rect" id="node20" href="metrics_05.html" target="_top" title="metrics_05" alt="" coords="445,1901,613,1989">
+<area shape="rect" id="node21" href="metrics_06.html" target="_top" title="metrics_06" alt="" coords="445,2007,613,2095">
+<area shape="rect" id="node22" href="metrics_07.html" target="_top" title="metrics_07" alt="" coords="445,2112,613,2200">
+<area shape="rect" id="node23" href="metrics_08.html" target="_top" title="metrics_08" alt="" coords="445,2217,613,2305">
+<area shape="rect" id="node24" href="metrics_09.html" target="_top" title="metrics_09" alt="" coords="445,2323,613,2411">
+<area shape="rect" id="node25" href="metrics_10.html" target="_top" title="metrics_10" alt="" coords="445,2428,613,2516">
+<area shape="rect" id="node26" href="metrics_11.html" target="_top" title="metrics_11" alt="" coords="445,2533,613,2621">
+<area shape="rect" id="node27" href="metrics_12.html" target="_top" title="metrics_12" alt="" coords="445,2639,613,2727">
+<area shape="rect" id="node28" href="metrics_13.html" target="_top" title="metrics_13" alt="" coords="445,2744,613,2832">
+<area shape="rect" id="node29" href="metrics_14.html" target="_top" title="metrics_14" alt="" coords="445,2849,613,2937">
+<area shape="rect" id="node30" href="metrics_15.html" target="_top" title="metrics_15" alt="" coords="445,2955,613,3043">
+<area shape="rect" id="node31" href="metrics_16.html" target="_top" title="metrics_16" alt="" coords="445,3060,613,3148">
+<area shape="rect" id="node32" href="metrics_17.html" target="_top" title="metrics_17" alt="" coords="445,3165,613,3253">
+<area shape="rect" id="node33" href="metrics_18.html" target="_top" title="metrics_18" alt="" coords="445,3271,613,3359">
+<area shape="rect" id="node34" href="metrics_19.html" target="_top" title="metrics_19" alt="" coords="445,3376,613,3464">
+<area shape="rect" id="node35" href="metrics_20.html" target="_top" title="metrics_20" alt="" coords="445,3481,613,3569">
+<area shape="rect" id="node36" href="metrics_21.html" target="_top" title="metrics_21" alt="" coords="257,3587,801,5856">
+<area shape="rect" id="node37" href="metrics_22.html" target="_top" title="metrics_22" alt="" coords="445,5873,613,5961">
+<area shape="rect" id="node38" href="metrics_23.html" target="_top" title="metrics_23" alt="" coords="445,5979,613,6067">
+<area shape="rect" id="node39" href="metrics_base.html" target="_top" title="metrics_base" alt="" coords="437,6084,622,6172">
+<area shape="rect" id="node40" href="miq_reports.html" target="_top" title="miq_reports" alt="" coords="440,6189,619,6277">
+<area shape="rect" id="node41" href="vim_performance_operating_ranges.html" target="_top" title="vim_performance_operating_ranges" alt="" coords="351,6295,707,6383">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/metrics_21.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

@@ -111,6 +111,30 @@
                                     <td>nextval(&#39;orchestration_stacks_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="authentication_orchestration_stacks.orchestration_stack_id references orchestration_stacks.id"><a href='authentication_orchestration_stacks.html'>authentication_orchestration_stacks</a><span class='relatedKey'>.orchestration_stack_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="cloud_networks.orchestration_stack_id references orchestration_stacks.id"><a href='cloud_networks.html'>cloud_networks</a><span class='relatedKey'>.orchestration_stack_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="configured_systems.orchestration_stack_id references orchestration_stacks.id"><a href='configured_systems.html'>configured_systems</a><span class='relatedKey'>.orchestration_stack_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="network_groups.orchestration_stack_id references orchestration_stacks.id"><a href='network_groups.html'>network_groups</a><span class='relatedKey'>.orchestration_stack_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="security_groups.orchestration_stack_id references orchestration_stacks.id"><a href='security_groups.html'>security_groups</a><span class='relatedKey'>.orchestration_stack_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="vms.orchestration_stack_id references orchestration_stacks.id"><a href='vms.html'>vms</a><span class='relatedKey'>.orchestration_stack_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -239,7 +263,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="orchestration_template_id">orchestration_template_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="orchestration_template_id">orchestration_template_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -251,6 +275,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="orchestration_stacks.orchestration_template_id references orchestration_templates.id"><a href='orchestration_templates.html'>orchestration_templates</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -409,7 +437,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="cloud_tenant_id">cloud_tenant_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="cloud_tenant_id">cloud_tenant_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -421,6 +449,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="orchestration_stacks.cloud_tenant_id references cloud_tenants.id"><a href='cloud_tenants.html'>cloud_tenants</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -545,7 +577,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="miq_group_id">miq_group_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="miq_group_id">miq_group_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -557,12 +589,16 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="orchestration_stacks.miq_group_id references miq_groups.id"><a href='miq_groups.html'>miq_groups</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="tenant_id">tenant_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="tenant_id">tenant_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -574,6 +610,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="orchestration_stacks.tenant_id references tenants.id"><a href='tenants.html'>tenants</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -654,10 +694,121 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="authentication_orchestration_stacks.html" target="_top" title="authentication_orchestration_stacks" alt="" coords="1103,1095,1467,1247">
+<area shape="rect" id="node2" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="617,415,1059,1306">
+<area shape="rect" id="node4" href="cloud_tenants.html" target="_top" title="cloud_tenants" alt="" coords="339,275,533,422">
+<area shape="rect" id="node6" href="miq_groups.html" target="_top" title="miq_groups" alt="" coords="331,1184,541,1331">
+<area shape="rect" id="node7" href="tenants.html" target="_top" title="tenants" alt="" coords="5,1308,255,1572">
+<area shape="rect" id="node9" href="orchestration_templates.html" target="_top" title="orchestration_templates" alt="" coords="299,652,573,858">
+<area shape="rect" id="node3" href="cloud_networks.html" target="_top" title="cloud_networks" alt="" coords="1153,62,1416,326">
+<area shape="rect" id="node5" href="configured_systems.html" target="_top" title="configured_systems" alt="" coords="1103,638,1466,1078">
+<area shape="rect" id="node8" href="network_groups.html" target="_top" title="network_groups" alt="" coords="1170,415,1399,620">
+<area shape="rect" id="node10" href="security_groups.html" target="_top" title="security_groups" alt="" coords="1534,66,1763,447">
+<area shape="rect" id="node11" href="vms.html" target="_top" title="vms" alt="" coords="1511,816,1787,1579">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/orchestration_stacks.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="authentication_orchestration_stacks.html" target="_top" title="authentication_orchestration_stacks" alt="" coords="1113,752,1477,904">
+<area shape="rect" id="node2" href="authentications.html" target="_top" title="authentications" alt="" coords="745,252,953,340">
+<area shape="rect" id="node3" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="628,1692,1069,2583">
+<area shape="rect" id="node4" href="miq_groups.html" target="_top" title="miq_groups" alt="" coords="336,469,547,616">
+<area shape="rect" id="node5" href="tenants.html" target="_top" title="tenants" alt="" coords="5,913,255,1177">
+<area shape="rect" id="node8" href="cloud_tenants.html" target="_top" title="cloud_tenants" alt="" coords="345,3239,538,3385">
+<area shape="rect" id="node59" href="orchestration_templates.html" target="_top" title="orchestration_templates" alt="" coords="304,1929,579,2135">
+<area shape="rect" id="node6" href="automate_workspaces.html" target="_top" title="automate_workspaces" alt="" coords="314,669,569,757">
+<area shape="rect" id="node7" href="cloud_databases.html" target="_top" title="cloud_databases" alt="" coords="1190,3737,1401,3825">
+<area shape="rect" id="node9" href="resource_groups.html" target="_top" title="resource_groups" alt="" coords="744,3701,953,3789">
+<area shape="rect" id="node10" href="cloud_networks.html" target="_top" title="cloud_networks" alt="" coords="1164,2957,1427,3221">
+<area shape="rect" id="node11" href="cloud_object_store_containers.html" target="_top" title="cloud_object_store_containers" alt="" coords="691,3241,1006,3329">
+<area shape="rect" id="node12" href="cloud_object_store_objects.html" target="_top" title="cloud_object_store_objects" alt="" coords="1151,3275,1439,3363">
+<area shape="rect" id="node13" href="cloud_resource_quotas.html" target="_top" title="cloud_resource_quotas" alt="" coords="719,2636,978,2724">
+<area shape="rect" id="node14" href="cloud_subnets.html" target="_top" title="cloud_subnets" alt="" coords="2011,3016,2206,3104">
+<area shape="rect" id="node15" href="availability_zones.html" target="_top" title="availability_zones" alt="" coords="1626,1267,1847,1355">
+<area shape="rect" id="node16" href="network_groups.html" target="_top" title="network_groups" alt="" coords="1181,2663,1410,2868">
+<area shape="rect" id="node17" href="network_routers.html" target="_top" title="network_routers" alt="" coords="1631,3076,1843,3164">
+<area shape="rect" id="node18" href="cloud_tenant_flavors.html" target="_top" title="cloud_tenant_flavors" alt="" coords="2282,2596,2525,2684">
+<area shape="rect" id="node19" href="flavors.html" target="_top" title="flavors" alt="" coords="2040,2203,2177,2291">
+<area shape="rect" id="node20" href="cloud_tenants_vms.html" target="_top" title="cloud_tenants_vms" alt="" coords="2698,2283,2929,2371">
+<area shape="rect" id="node21" href="vms.html" target="_top" title="vms" alt="" coords="2265,1719,2541,2481">
+<area shape="rect" id="node33" href="ems_clusters.html" target="_top" title="ems_clusters" alt="" coords="1645,1125,1828,1213">
+<area shape="rect" id="node34" href="hosts.html" target="_top" title="hosts" alt="" coords="2045,1163,2172,1251">
+<area shape="rect" id="node60" href="placement_groups.html" target="_top" title="placement_groups" alt="" coords="1996,2413,2221,2501">
+<area shape="rect" id="node73" href="storages.html" target="_top" title="storages" alt="" coords="2034,1304,2183,1392">
+<area shape="rect" id="node74" href="storage_profiles.html" target="_top" title="storage_profiles" alt="" coords="2006,2308,2211,2396">
+<area shape="rect" id="node22" href="cloud_volume_snapshots.html" target="_top" title="cloud_volume_snapshots" alt="" coords="1600,2591,1873,2679">
+<area shape="rect" id="node23" href="cloud_volumes.html" target="_top" title="cloud_volumes" alt="" coords="2009,2555,2208,2643">
+<area shape="rect" id="node24" href="configuration_profiles.html" target="_top" title="configuration_profiles" alt="" coords="723,1147,974,1235">
+<area shape="rect" id="node25" href="operating_system_flavors.html" target="_top" title="operating_system_flavors" alt="" coords="303,1409,580,1497">
+<area shape="rect" id="node26" href="configuration_tags_configured_systems.html" target="_top" title="configuration_tags_configured_systems" alt="" coords="1547,1477,1926,1565">
+<area shape="rect" id="node27" href="configured_systems.html" target="_top" title="configured_systems" alt="" coords="1114,1125,1477,1565">
+<area shape="rect" id="node28" href="configuration_locations.html" target="_top" title="configuration_locations" alt="" coords="717,1252,980,1340">
+<area shape="rect" id="node29" href="configuration_organizations.html" target="_top" title="configuration_organizations" alt="" coords="701,1357,997,1445">
+<area shape="rect" id="node30" href="direct_configuration_tags_configured_systems.html" target="_top" title="direct_configuration_tags_configured_systems" alt="" coords="1521,1372,1952,1460">
+<area shape="rect" id="node31" href="entitlements.html" target="_top" title="entitlements" alt="" coords="755,607,942,695">
+<area shape="rect" id="node32" href="event_streams.html" target="_top" title="event_streams" alt="" coords="2305,1125,2502,1213">
+<area shape="rect" id="node35" href="ext_management_systems.html" target="_top" title="ext_management_systems" alt="" coords="706,1012,991,1100">
+<area shape="rect" id="node36" href="providers.html" target="_top" title="providers" alt="" coords="362,952,521,1040">
+<area shape="rect" id="node37" href="floating_ips.html" target="_top" title="floating_ips" alt="" coords="2727,3537,2899,3625">
+<area shape="rect" id="node38" href="network_ports.html" target="_top" title="network_ports" alt="" coords="2305,3665,2501,3753">
+<area shape="rect" id="node39" href="key_pairs_vms.html" target="_top" title="key_pairs_vms" alt="" coords="2716,869,2911,957">
+<area shape="rect" id="node40" href="load_balancer_health_checks.html" target="_top" title="load_balancer_health_checks" alt="" coords="1584,3947,1889,4035">
+<area shape="rect" id="node41" href="load_balancers.html" target="_top" title="load_balancers" alt="" coords="749,3915,948,4003">
+<area shape="rect" id="node42" href="load_balancer_listeners.html" target="_top" title="load_balancer_listeners" alt="" coords="1163,3879,1427,3967">
+<area shape="rect" id="node43" href="load_balancer_pool_members.html" target="_top" title="load_balancer_pool_members" alt="" coords="2659,3327,2968,3415">
+<area shape="rect" id="node44" href="load_balancer_pools.html" target="_top" title="load_balancer_pools" alt="" coords="729,3455,968,3543">
+<area shape="rect" id="node45" href="miq_ae_namespaces.html" target="_top" title="miq_ae_namespaces" alt="" coords="322,1057,561,1145">
+<area shape="rect" id="node46" href="miq_groups_users.html" target="_top" title="miq_groups_users" alt="" coords="739,712,958,800">
+<area shape="rect" id="node47" href="miq_product_features.html" target="_top" title="miq_product_features" alt="" coords="315,1163,568,1251">
+<area shape="rect" id="node48" href="miq_queue.html" target="_top" title="miq_queue" alt="" coords="356,1268,527,1356">
+<area shape="rect" id="node49" href="miq_report_results.html" target="_top" title="miq_report_results" alt="" coords="1181,393,1410,481">
+<area shape="rect" id="node50" href="miq_reports.html" target="_top" title="miq_reports" alt="" coords="759,393,938,481">
+<area shape="rect" id="node51" href="miq_request_tasks.html" target="_top" title="miq_request_tasks" alt="" coords="1182,1619,1409,1707">
+<area shape="rect" id="node52" href="miq_requests.html" target="_top" title="miq_requests" alt="" coords="755,1551,943,1639">
+<area shape="rect" id="node53" href="service_orders.html" target="_top" title="service_orders" alt="" coords="344,1551,539,1639">
+<area shape="rect" id="node54" href="miq_servers.html" target="_top" title="miq_servers" alt="" coords="2725,1669,2902,1757">
+<area shape="rect" id="node55" href="miq_widget_contents.html" target="_top" title="miq_widget_contents" alt="" coords="1613,359,1860,447">
+<area shape="rect" id="node56" href="network_ports_security_groups.html" target="_top" title="network_ports_security_groups" alt="" coords="2653,3432,2974,3520">
+<area shape="rect" id="node57" href="security_groups.html" target="_top" title="security_groups" alt="" coords="2289,2857,2518,3239">
+<area shape="rect" id="node58" href="network_services.html" target="_top" title="network_services" alt="" coords="740,3596,957,3684">
+<area shape="rect" id="node61" href="security_groups_vms.html" target="_top" title="security_groups_vms" alt="" coords="2692,2793,2935,2881">
+<area shape="rect" id="node62" href="security_policies.html" target="_top" title="security_policies" alt="" coords="2003,3275,2215,3363">
+<area shape="rect" id="node63" href="security_policy_rule_destination_security_groups.html" target="_top" title="security_policy_rule_destination_security_groups" alt="" coords="2585,2928,3041,3016">
+<area shape="rect" id="node64" href="security_policy_rules.html" target="_top" title="security_policy_rules" alt="" coords="2281,3292,2525,3380">
+<area shape="rect" id="node65" href="security_policy_rule_source_security_groups.html" target="_top" title="security_policy_rule_source_security_groups" alt="" coords="2604,3163,3023,3251">
+<area shape="rect" id="node66" href="service_template_catalogs.html" target="_top" title="service_template_catalogs" alt="" coords="299,775,584,863">
+<area shape="rect" id="node67" href="service_template_tenants.html" target="_top" title="service_template_tenants" alt="" coords="1154,921,1437,1009">
+<area shape="rect" id="node68" href="service_templates.html" target="_top" title="service_templates" alt="" coords="737,853,961,941">
+<area shape="rect" id="node69" href="services.html" target="_top" title="services" alt="" coords="1222,647,1369,735">
+<area shape="rect" id="node70" href="shares.html" target="_top" title="shares" alt="" coords="374,5,509,93">
+<area shape="rect" id="node71" href="system_consoles.html" target="_top" title="system_consoles" alt="" coords="2708,1775,2919,1863">
+<area shape="rect" id="node72" href="tenant_quotas.html" target="_top" title="tenant_quotas" alt="" coords="343,111,539,199">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/orchestration_stacks.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

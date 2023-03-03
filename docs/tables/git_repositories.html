@@ -111,6 +111,18 @@
                                     <td>nextval(&#39;git_repositories_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="configuration_script_sources.git_repository_id references git_repositories.id"><a href='configuration_script_sources.html'>configuration_script_sources</a><span class='relatedKey'>.git_repository_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="git_references.git_repository_id references git_repositories.id"><a href='git_references.html'>git_references</a><span class='relatedKey'>.git_repository_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="miq_ae_namespaces.git_repository_id references git_repositories.id"><a href='miq_ae_namespaces.html'>miq_ae_namespaces</a><span class='relatedKey'>.git_repository_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -222,7 +234,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="authentication_id">authentication_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="authentication_id">authentication_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -234,6 +246,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="git_repositories.authentication_id references authentications.id"><a href='authentications.html'>authentications</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -272,10 +288,52 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="configuration_script_sources.html" target="_top" title="configuration_script_sources" alt="" coords="688,5,989,211">
+<area shape="rect" id="node2" href="authentications.html" target="_top" title="authentications" alt="" coords="5,277,244,541">
+<area shape="rect" id="node3" href="git_repositories.html" target="_top" title="git_repositories" alt="" coords="288,248,644,552">
+<area shape="rect" id="node4" href="git_references.html" target="_top" title="git_references" alt="" coords="742,228,935,404">
+<area shape="rect" id="node5" href="miq_ae_namespaces.html" target="_top" title="miq_ae_namespaces" alt="" coords="719,421,958,685">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/git_repositories.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="authentication_configuration_script_bases.html" target="_top" title="authentication_configuration_script_bases" alt="" coords="695,567,1101,655">
+<area shape="rect" id="node2" href="authentications.html" target="_top" title="authentications" alt="" coords="412,477,651,741">
+<area shape="rect" id="node4" href="miq_groups.html" target="_top" title="miq_groups" alt="" coords="195,597,368,685">
+<area shape="rect" id="node5" href="tenants.html" target="_top" title="tenants" alt="" coords="5,665,151,753">
+<area shape="rect" id="node3" href="authentication_orchestration_stacks.html" target="_top" title="authentication_orchestration_stacks" alt="" coords="716,672,1080,760">
+<area shape="rect" id="node6" href="configuration_script_sources.html" target="_top" title="configuration_script_sources" alt="" coords="1145,5,1447,211">
+<area shape="rect" id="node7" href="git_repositories.html" target="_top" title="git_repositories" alt="" coords="720,140,1076,444">
+<area shape="rect" id="node8" href="configuration_scripts.html" target="_top" title="configuration_scripts" alt="" coords="1491,8,1736,96">
+<area shape="rect" id="node9" href="git_references.html" target="_top" title="git_references" alt="" coords="1199,228,1393,404">
+<area shape="rect" id="node10" href="key_pairs_vms.html" target="_top" title="key_pairs_vms" alt="" coords="801,461,995,549">
+<area shape="rect" id="node11" href="miq_ae_namespaces.html" target="_top" title="miq_ae_namespaces" alt="" coords="1177,549,1415,813">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/git_repositories.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

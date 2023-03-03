@@ -137,7 +137,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="pxe_image_type_id">pxe_image_type_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="pxe_image_type_id">pxe_image_type_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -149,12 +149,16 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="iso_images.pxe_image_type_id references pxe_image_types.id"><a href='pxe_image_types.html'>pxe_image_types</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="storage_id">storage_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="storage_id">storage_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -166,6 +170,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="iso_images.storage_id references storages.id"><a href='storages.html'>storages</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -210,10 +218,52 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="iso_images.html" target="_top" title="iso_images" alt="" coords="344,5,707,192">
+<area shape="rect" id="node2" href="pxe_image_types.html" target="_top" title="pxe_image_types" alt="" coords="45,13,260,131">
+<area shape="rect" id="node3" href="storages.html" target="_top" title="storages" alt="" coords="5,148,300,353">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/iso_images.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="customization_templates.html" target="_top" title="customization_templates" alt="" coords="386,5,665,93">
+<area shape="rect" id="node2" href="pxe_image_types.html" target="_top" title="pxe_image_types" alt="" coords="45,161,260,279">
+<area shape="rect" id="node3" href="disks.html" target="_top" title="disks" alt="" coords="463,525,587,613">
+<area shape="rect" id="node4" href="storages.html" target="_top" title="storages" alt="" coords="5,787,300,992">
+<area shape="rect" id="node5" href="host_storages.html" target="_top" title="host_storages" alt="" coords="431,631,619,719">
+<area shape="rect" id="node6" href="iso_images.html" target="_top" title="iso_images" alt="" coords="344,321,707,508">
+<area shape="rect" id="node7" href="pxe_images.html" target="_top" title="pxe_images" alt="" coords="439,111,612,199">
+<area shape="rect" id="node8" href="repositories.html" target="_top" title="repositories" alt="" coords="437,736,614,824">
+<area shape="rect" id="node9" href="storage_files.html" target="_top" title="storage_files" alt="" coords="436,841,615,929">
+<area shape="rect" id="node10" href="storage_profile_storages.html" target="_top" title="storage_profile_storages" alt="" coords="392,947,659,1035">
+<area shape="rect" id="node11" href="storages_vms_and_templates.html" target="_top" title="storages_vms_and_templates" alt="" coords="373,1052,678,1140">
+<area shape="rect" id="node12" href="vms.html" target="_top" title="vms" alt="" coords="467,1157,584,1245">
+<area shape="rect" id="node13" href="windows_images.html" target="_top" title="windows_images" alt="" coords="419,216,631,304">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/iso_images.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

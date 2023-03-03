@@ -111,6 +111,22 @@
                                     <td>nextval(&#39;pxe_image_types_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="customization_templates.pxe_image_type_id references pxe_image_types.id"><a href='customization_templates.html'>customization_templates</a><span class='relatedKey'>.pxe_image_type_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="iso_images.pxe_image_type_id references pxe_image_types.id"><a href='iso_images.html'>iso_images</a><span class='relatedKey'>.pxe_image_type_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="pxe_images.pxe_image_type_id references pxe_image_types.id"><a href='pxe_images.html'>pxe_images</a><span class='relatedKey'>.pxe_image_type_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="windows_images.pxe_image_type_id references pxe_image_types.id"><a href='windows_images.html'>windows_images</a><span class='relatedKey'>.pxe_image_type_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -187,10 +203,49 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="customization_templates.html" target="_top" title="customization_templates" alt="" coords="399,5,677,181">
+<area shape="rect" id="node2" href="pxe_image_types.html" target="_top" title="pxe_image_types" alt="" coords="5,367,355,524">
+<area shape="rect" id="node3" href="iso_images.html" target="_top" title="iso_images" alt="" coords="440,199,636,375">
+<area shape="rect" id="node4" href="pxe_images.html" target="_top" title="pxe_images" alt="" coords="431,392,645,627">
+<area shape="rect" id="node5" href="windows_images.html" target="_top" title="windows_images" alt="" coords="432,644,644,820">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/pxe_image_types.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="customization_templates.html" target="_top" title="customization_templates" alt="" coords="617,392,896,568">
+<area shape="rect" id="node2" href="pxe_image_types.html" target="_top" title="pxe_image_types" alt="" coords="224,391,573,548">
+<area shape="rect" id="node3" href="iso_images.html" target="_top" title="iso_images" alt="" coords="659,5,855,181">
+<area shape="rect" id="node4" href="storages.html" target="_top" title="storages" alt="" coords="324,67,473,155">
+<area shape="rect" id="node5" href="pxe_images.html" target="_top" title="pxe_images" alt="" coords="650,585,863,820">
+<area shape="rect" id="node6" href="pxe_menus.html" target="_top" title="pxe_menus" alt="" coords="313,647,484,735">
+<area shape="rect" id="node7" href="pxe_servers.html" target="_top" title="pxe_servers" alt="" coords="5,573,180,661">
+<area shape="rect" id="node8" href="windows_images.html" target="_top" title="windows_images" alt="" coords="651,199,863,375">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/pxe_image_types.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

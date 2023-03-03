@@ -111,6 +111,14 @@
                                     <td>nextval(&#39;currencies_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="service_templates.currency_id references currencies.id"><a href='service_templates.html'>service_templates</a><span class='relatedKey'>.currency_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="services.currency_id references currencies.id"><a href='services.html'>services</a><span class='relatedKey'>.currency_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -272,10 +280,48 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="service_templates.html" target="_top" title="service_templates" alt="" coords="364,5,635,357">
+<area shape="rect" id="node2" href="currencies.html" target="_top" title="currencies" alt="" coords="5,284,320,588">
+<area shape="rect" id="node3" href="services.html" target="_top" title="services" alt="" coords="679,53,900,347">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/currencies.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="miq_groups.html" target="_top" title="miq_groups" alt="" coords="265,97,439,185">
+<area shape="rect" id="node2" href="tenants.html" target="_top" title="tenants" alt="" coords="5,202,151,290">
+<area shape="rect" id="node3" href="service_resources.html" target="_top" title="service_resources" alt="" coords="1195,162,1413,250">
+<area shape="rect" id="node4" href="services.html" target="_top" title="services" alt="" coords="899,197,1120,490">
+<area shape="rect" id="node5" href="service_templates.html" target="_top" title="service_templates" alt="" coords="553,121,824,473">
+<area shape="rect" id="node8" href="currencies.html" target="_top" title="currencies" alt="" coords="195,526,509,830">
+<area shape="rect" id="node6" href="service_template_catalogs.html" target="_top" title="service_template_catalogs" alt="" coords="209,202,495,290">
+<area shape="rect" id="node9" href="zones.html" target="_top" title="zones" alt="" coords="288,343,416,431">
+<area shape="rect" id="node7" href="service_template_tenants.html" target="_top" title="service_template_tenants" alt="" coords="868,34,1151,122">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/currencies.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

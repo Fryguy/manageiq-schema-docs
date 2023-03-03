@@ -111,6 +111,22 @@
                                     <td>nextval(&#39;network_ports_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="cloud_subnets_network_ports.network_port_id references network_ports.id"><a href='cloud_subnets_network_ports.html'>cloud_subnets_network_ports</a><span class='relatedKey'>.network_port_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="floating_ips.network_port_id references network_ports.id"><a href='floating_ips.html'>floating_ips</a><span class='relatedKey'>.network_port_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="load_balancer_pool_members.network_port_id references network_ports.id"><a href='load_balancer_pool_members.html'>load_balancer_pool_members</a><span class='relatedKey'>.network_port_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="network_ports_security_groups.network_port_id references network_ports.id"><a href='network_ports_security_groups.html'>network_ports_security_groups</a><span class='relatedKey'>.network_port_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -307,7 +323,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="cloud_tenant_id">cloud_tenant_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="cloud_tenant_id">cloud_tenant_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -319,6 +335,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="network_ports.cloud_tenant_id references cloud_tenants.id"><a href='cloud_tenants.html'>cloud_tenants</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -392,7 +412,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="resource_group_id">resource_group_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="resource_group_id">resource_group_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -404,6 +424,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="network_ports.resource_group_id references resource_groups.id"><a href='resource_groups.html'>resource_groups</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -472,10 +496,75 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="cloud_subnets_network_ports.html" target="_top" title="cloud_subnets_network_ports" alt="" coords="764,345,1075,527">
+<area shape="rect" id="node2" href="network_ports.html" target="_top" title="network_ports" alt="" coords="259,325,715,923">
+<area shape="rect" id="node4" href="cloud_tenants.html" target="_top" title="cloud_tenants" alt="" coords="13,680,207,827">
+<area shape="rect" id="node6" href="resource_groups.html" target="_top" title="resource_groups" alt="" coords="5,889,215,1007">
+<area shape="rect" id="node3" href="floating_ips.html" target="_top" title="floating_ips" alt="" coords="815,5,1023,328">
+<area shape="rect" id="node5" href="load_balancer_pool_members.html" target="_top" title="load_balancer_pool_members" alt="" coords="765,789,1074,1112">
+<area shape="rect" id="node7" href="network_ports_security_groups.html" target="_top" title="network_ports_security_groups" alt="" coords="759,544,1080,696">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/network_ports.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="cloud_database_servers.html" target="_top" title="cloud_database_servers" alt="" coords="613,674,878,762">
+<area shape="rect" id="node2" href="resource_groups.html" target="_top" title="resource_groups" alt="" coords="295,739,505,857">
+<area shape="rect" id="node3" href="cloud_databases.html" target="_top" title="cloud_databases" alt="" coords="981,602,1191,690">
+<area shape="rect" id="node4" href="cloud_tenants.html" target="_top" title="cloud_tenants" alt="" coords="5,1097,199,1243">
+<area shape="rect" id="node5" href="cloud_networks.html" target="_top" title="cloud_networks" alt="" coords="643,995,848,1083">
+<area shape="rect" id="node6" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="279,1031,521,1119">
+<area shape="rect" id="node7" href="cloud_object_store_containers.html" target="_top" title="cloud_object_store_containers" alt="" coords="243,1741,557,1829">
+<area shape="rect" id="node8" href="cloud_object_store_objects.html" target="_top" title="cloud_object_store_objects" alt="" coords="601,1703,889,1791">
+<area shape="rect" id="node9" href="cloud_resource_quotas.html" target="_top" title="cloud_resource_quotas" alt="" coords="271,1494,529,1582">
+<area shape="rect" id="node10" href="cloud_subnets.html" target="_top" title="cloud_subnets" alt="" coords="1305,926,1499,1014">
+<area shape="rect" id="node11" href="network_routers.html" target="_top" title="network_routers" alt="" coords="980,926,1192,1014">
+<area shape="rect" id="node12" href="cloud_subnets_network_ports.html" target="_top" title="cloud_subnets_network_ports" alt="" coords="2071,433,2381,614">
+<area shape="rect" id="node13" href="network_ports.html" target="_top" title="network_ports" alt="" coords="1565,133,2021,730">
+<area shape="rect" id="node14" href="cloud_tenant_flavors.html" target="_top" title="cloud_tenant_flavors" alt="" coords="279,1599,521,1687">
+<area shape="rect" id="node15" href="cloud_tenants_vms.html" target="_top" title="cloud_tenants_vms" alt="" coords="2111,1361,2341,1449">
+<area shape="rect" id="node16" href="vms.html" target="_top" title="vms" alt="" coords="1735,1102,1852,1190">
+<area shape="rect" id="node30" href="placement_groups.html" target="_top" title="placement_groups" alt="" coords="1289,1175,1515,1263">
+<area shape="rect" id="node17" href="cloud_volume_snapshots.html" target="_top" title="cloud_volume_snapshots" alt="" coords="609,195,882,283">
+<area shape="rect" id="node18" href="cloud_volumes.html" target="_top" title="cloud_volumes" alt="" coords="301,211,499,299">
+<area shape="rect" id="node19" href="floating_ips.html" target="_top" title="floating_ips" alt="" coords="2122,1017,2330,1339">
+<area shape="rect" id="node20" href="load_balancer_health_check_members.html" target="_top" title="load_balancer_health_check_members" alt="" coords="2431,465,2807,553">
+<area shape="rect" id="node21" href="load_balancer_health_checks.html" target="_top" title="load_balancer_health_checks" alt="" coords="933,334,1239,422">
+<area shape="rect" id="node22" href="load_balancer_pool_members.html" target="_top" title="load_balancer_pool_members" alt="" coords="2071,677,2381,999">
+<area shape="rect" id="node23" href="load_balancers.html" target="_top" title="load_balancers" alt="" coords="301,353,499,441">
+<area shape="rect" id="node24" href="load_balancer_listeners.html" target="_top" title="load_balancer_listeners" alt="" coords="613,301,877,389">
+<area shape="rect" id="node25" href="load_balancer_pool_member_pools.html" target="_top" title="load_balancer_pool_member_pools" alt="" coords="2445,895,2793,983">
+<area shape="rect" id="node26" href="load_balancer_pools.html" target="_top" title="load_balancer_pools" alt="" coords="1283,1458,1521,1546">
+<area shape="rect" id="node27" href="network_ports_security_groups.html" target="_top" title="network_ports_security_groups" alt="" coords="2065,177,2387,329">
+<area shape="rect" id="node28" href="security_groups.html" target="_top" title="security_groups" alt="" coords="1691,783,1896,871">
+<area shape="rect" id="node29" href="network_services.html" target="_top" title="network_services" alt="" coords="291,1846,509,1934">
+<area shape="rect" id="node31" href="security_policies.html" target="_top" title="security_policies" alt="" coords="294,1245,506,1333">
+<area shape="rect" id="node32" href="security_policy_rules.html" target="_top" title="security_policy_rules" alt="" coords="623,1271,867,1359">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/network_ports.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

@@ -205,7 +205,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="hardware_id">hardware_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="hardware_id">hardware_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -217,6 +217,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="volumes.hardware_id references hardwares.id"><a href='hardwares.html'>hardwares</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -346,10 +350,48 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="volumes.html" target="_top" title="volumes" alt="" coords="283,5,611,427">
+<area shape="rect" id="node2" href="hardwares.html" target="_top" title="hardwares" alt="" coords="5,184,239,448">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/volumes.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="disks.html" target="_top" title="disks" alt="" coords="827,216,951,304">
+<area shape="rect" id="node2" href="hardwares.html" target="_top" title="hardwares" alt="" coords="448,180,681,444">
+<area shape="rect" id="node4" href="switches.html" target="_top" title="switches" alt="" coords="214,300,366,388">
+<area shape="rect" id="node5" href="canisters.html" target="_top" title="canisters" alt="" coords="213,405,367,493">
+<area shape="rect" id="node6" href="computer_systems.html" target="_top" title="computer_systems" alt="" coords="176,195,404,283">
+<area shape="rect" id="node7" href="hosts.html" target="_top" title="hosts" alt="" coords="5,211,132,299">
+<area shape="rect" id="node3" href="guest_devices.html" target="_top" title="guest_devices" alt="" coords="794,5,985,93">
+<area shape="rect" id="node8" href="networks.html" target="_top" title="networks" alt="" coords="811,111,968,199">
+<area shape="rect" id="node9" href="partitions.html" target="_top" title="partitions" alt="" coords="1097,469,1260,557">
+<area shape="rect" id="node10" href="volumes.html" target="_top" title="volumes" alt="" coords="725,321,1053,743">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/volumes.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

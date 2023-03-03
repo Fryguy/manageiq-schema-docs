@@ -111,6 +111,10 @@
                                     <td>nextval(&#39;orchestration_templates_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="orchestration_stacks.orchestration_template_id references orchestration_templates.id"><a href='orchestration_stacks.html'>orchestration_stacks</a><span class='relatedKey'>.orchestration_template_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -358,10 +362,49 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="461,5,736,328">
+<area shape="rect" id="node2" href="orchestration_templates.html" target="_top" title="orchestration_templates" alt="" coords="5,91,417,512">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/orchestration_templates.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="authentication_orchestration_stacks.html" target="_top" title="authentication_orchestration_stacks" alt="" coords="969,340,1333,428">
+<area shape="rect" id="node2" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="651,204,925,527">
+<area shape="rect" id="node4" href="cloud_tenants.html" target="_top" title="cloud_tenants" alt="" coords="304,480,497,568">
+<area shape="rect" id="node6" href="miq_groups.html" target="_top" title="miq_groups" alt="" coords="314,585,487,673">
+<area shape="rect" id="node7" href="tenants.html" target="_top" title="tenants" alt="" coords="5,585,151,673">
+<area shape="rect" id="node9" href="orchestration_templates.html" target="_top" title="orchestration_templates" alt="" coords="195,5,607,427">
+<area shape="rect" id="node3" href="cloud_networks.html" target="_top" title="cloud_networks" alt="" coords="1049,445,1254,533">
+<area shape="rect" id="node5" href="configured_systems.html" target="_top" title="configured_systems" alt="" coords="1034,235,1269,323">
+<area shape="rect" id="node8" href="network_groups.html" target="_top" title="network_groups" alt="" coords="1048,129,1255,217">
+<area shape="rect" id="node10" href="security_groups.html" target="_top" title="security_groups" alt="" coords="1377,93,1583,181">
+<area shape="rect" id="node11" href="vms.html" target="_top" title="vms" alt="" coords="1421,549,1539,637">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/orchestration_templates.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

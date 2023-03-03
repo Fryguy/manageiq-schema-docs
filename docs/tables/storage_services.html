@@ -111,6 +111,14 @@
                                     <td>nextval(&#39;storage_services_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="cloud_volumes.storage_service_id references storage_services.id"><a href='cloud_volumes.html'>cloud_volumes</a><span class='relatedKey'>.storage_service_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="storage_service_resource_attachments.storage_service_id references storage_services.id"><a href='storage_service_resource_attachments.html'>storage_service_resource_attachments</a><span class='relatedKey'>.storage_service_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -329,10 +337,48 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="cloud_volumes.html" target="_top" title="cloud_volumes" alt="" coords="455,5,715,299">
+<area shape="rect" id="node2" href="storage_services.html" target="_top" title="storage_services" alt="" coords="5,260,352,652">
+<area shape="rect" id="node3" href="storage_service_resource_attachments.html" target="_top" title="storage_service_resource_attachments" alt="" coords="396,316,775,521">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/storage_services.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="cloud_volume_backups.html" target="_top" title="cloud_volume_backups" alt="" coords="1056,5,1316,93">
+<area shape="rect" id="node2" href="availability_zones.html" target="_top" title="availability_zones" alt="" coords="305,5,527,93">
+<area shape="rect" id="node3" href="cloud_volumes.html" target="_top" title="cloud_volumes" alt="" coords="693,79,953,372">
+<area shape="rect" id="node4" href="cloud_volume_snapshots.html" target="_top" title="cloud_volume_snapshots" alt="" coords="279,111,553,199">
+<area shape="rect" id="node5" href="cloud_tenants.html" target="_top" title="cloud_tenants" alt="" coords="5,145,199,233">
+<area shape="rect" id="node6" href="storage_resources.html" target="_top" title="storage_resources" alt="" coords="305,661,527,749">
+<area shape="rect" id="node7" href="storage_services.html" target="_top" title="storage_services" alt="" coords="243,252,589,644">
+<area shape="rect" id="node8" href="storage_service_resource_attachments.html" target="_top" title="storage_service_resource_attachments" alt="" coords="633,495,1012,700">
+<area shape="rect" id="node9" href="volume_mappings.html" target="_top" title="volume_mappings" alt="" coords="1075,111,1297,199">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/storage_services.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

@@ -111,6 +111,10 @@
                                     <td>nextval(&#39;service_template_catalogs_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="service_templates.service_template_catalog_id references service_template_catalogs.id"><a href='service_templates.html'>service_templates</a><span class='relatedKey'>.service_template_catalog_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -154,7 +158,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="tenant_id">tenant_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="tenant_id">tenant_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -166,6 +170,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="service_template_catalogs.tenant_id references tenants.id"><a href='tenants.html'>tenants</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -204,10 +212,63 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="service_template_catalogs.html" target="_top" title="service_template_catalogs" alt="" coords="299,53,723,240">
+<area shape="rect" id="node2" href="tenants.html" target="_top" title="tenants" alt="" coords="5,180,255,444">
+<area shape="rect" id="node3" href="service_templates.html" target="_top" title="service_templates" alt="" coords="767,5,1037,357">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/service_template_catalogs.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="authentications.html" target="_top" title="authentications" alt="" coords="805,979,1013,1067">
+<area shape="rect" id="node2" href="miq_groups.html" target="_top" title="miq_groups" alt="" coords="424,817,597,905">
+<area shape="rect" id="node3" href="tenants.html" target="_top" title="tenants" alt="" coords="5,724,255,988">
+<area shape="rect" id="node4" href="automate_workspaces.html" target="_top" title="automate_workspaces" alt="" coords="383,5,638,93">
+<area shape="rect" id="node5" href="event_streams.html" target="_top" title="event_streams" alt="" coords="412,111,609,199">
+<area shape="rect" id="node6" href="ext_management_systems.html" target="_top" title="ext_management_systems" alt="" coords="767,1623,1052,1711">
+<area shape="rect" id="node7" href="providers.html" target="_top" title="providers" alt="" coords="431,1623,590,1711">
+<area shape="rect" id="node8" href="zones.html" target="_top" title="zones" alt="" coords="66,1623,194,1711">
+<area shape="rect" id="node9" href="miq_ae_namespaces.html" target="_top" title="miq_ae_namespaces" alt="" coords="391,288,630,376">
+<area shape="rect" id="node10" href="miq_product_features.html" target="_top" title="miq_product_features" alt="" coords="384,393,637,481">
+<area shape="rect" id="node11" href="miq_queue.html" target="_top" title="miq_queue" alt="" coords="425,640,596,728">
+<area shape="rect" id="node12" href="miq_request_tasks.html" target="_top" title="miq_request_tasks" alt="" coords="1124,216,1351,304">
+<area shape="rect" id="node13" href="miq_requests.html" target="_top" title="miq_requests" alt="" coords="815,252,1003,340">
+<area shape="rect" id="node14" href="service_orders.html" target="_top" title="service_orders" alt="" coords="413,499,608,587">
+<area shape="rect" id="node15" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="788,640,1031,728">
+<area shape="rect" id="node16" href="service_resources.html" target="_top" title="service_resources" alt="" coords="1423,1153,1641,1241">
+<area shape="rect" id="node17" href="services.html" target="_top" title="services" alt="" coords="1164,1189,1311,1277">
+<area shape="rect" id="node18" href="service_templates.html" target="_top" title="service_templates" alt="" coords="774,1113,1045,1465">
+<area shape="rect" id="node21" href="currencies.html" target="_top" title="currencies" alt="" coords="427,1445,594,1533">
+<area shape="rect" id="node19" href="service_template_catalogs.html" target="_top" title="service_template_catalogs" alt="" coords="299,1169,723,1356">
+<area shape="rect" id="node20" href="service_template_tenants.html" target="_top" title="service_template_tenants" alt="" coords="1096,896,1379,984">
+<area shape="rect" id="node22" href="shares.html" target="_top" title="shares" alt="" coords="443,923,578,1011">
+<area shape="rect" id="node23" href="tenant_quotas.html" target="_top" title="tenant_quotas" alt="" coords="413,1028,609,1116">
+<area shape="rect" id="node24" href="vms.html" target="_top" title="vms" alt="" coords="1179,640,1296,728">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/service_template_catalogs.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

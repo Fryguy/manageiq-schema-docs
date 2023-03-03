@@ -111,6 +111,14 @@
                                     <td>nextval(&#39;file_depots_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="log_files.file_depot_id references file_depots.id"><a href='log_files.html'>log_files</a><span class='relatedKey'>.file_depot_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="miq_schedules.file_depot_id references file_depots.id"><a href='miq_schedules.html'>miq_schedules</a><span class='relatedKey'>.file_depot_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -346,10 +354,46 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="log_files.html" target="_top" title="log_files" alt="" coords="435,5,632,240">
+<area shape="rect" id="node2" href="file_depots.html" target="_top" title="file_depots" alt="" coords="5,247,391,668">
+<area shape="rect" id="node3" href="miq_schedules.html" target="_top" title="miq_schedules" alt="" coords="435,257,632,492">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/file_depots.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="log_files.html" target="_top" title="log_files" alt="" coords="676,5,873,240">
+<area shape="rect" id="node2" href="file_depots.html" target="_top" title="file_depots" alt="" coords="5,445,391,867">
+<area shape="rect" id="node3" href="miq_tasks.html" target="_top" title="miq_tasks" alt="" coords="453,185,614,273">
+<area shape="rect" id="node4" href="miq_schedules.html" target="_top" title="miq_schedules" alt="" coords="435,291,632,525">
+<area shape="rect" id="node5" href="miq_searches.html" target="_top" title="miq_searches" alt="" coords="104,235,292,323">
+<area shape="rect" id="node6" href="zones.html" target="_top" title="zones" alt="" coords="134,340,262,428">
+<area shape="rect" id="node7" href="miq_widgets.html" target="_top" title="miq_widgets" alt="" coords="684,269,865,357">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/file_depots.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

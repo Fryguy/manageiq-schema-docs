@@ -111,6 +111,14 @@
                                     <td>nextval(&#39;container_replicators_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="container_groups.container_replicator_id references container_replicators.id"><a href='container_groups.html'>container_groups</a><span class='relatedKey'>.container_replicator_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="event_streams.container_replicator_id references container_replicators.id"><a href='event_streams.html'>event_streams</a><span class='relatedKey'>.container_replicator_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -239,7 +247,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="container_project_id">container_project_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="container_project_id">container_project_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -251,6 +259,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="container_replicators.container_project_id references container_projects.id"><a href='container_projects.html'>container_projects</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -306,10 +318,62 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="container_groups.html" target="_top" title="container_groups" alt="" coords="707,251,949,573">
+<area shape="rect" id="node2" href="container_projects.html" target="_top" title="container_projects" alt="" coords="5,555,233,731">
+<area shape="rect" id="node3" href="container_replicators.html" target="_top" title="container_replicators" alt="" coords="277,473,663,836">
+<area shape="rect" id="node4" href="event_streams.html" target="_top" title="event_streams" alt="" coords="993,5,1256,709">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/container_replicators.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="container_build_pods.html" target="_top" title="container_build_pods" alt="" coords="673,536,921,624">
+<area shape="rect" id="node2" href="container_builds.html" target="_top" title="container_builds" alt="" coords="312,601,525,689">
+<area shape="rect" id="node3" href="container_projects.html" target="_top" title="container_projects" alt="" coords="5,841,233,1017">
+<area shape="rect" id="node4" href="container_groups.html" target="_top" title="container_groups" alt="" coords="1033,357,1276,680">
+<area shape="rect" id="node5" href="container_nodes.html" target="_top" title="container_nodes" alt="" coords="691,339,902,427">
+<area shape="rect" id="node6" href="container_replicators.html" target="_top" title="container_replicators" alt="" coords="604,641,989,1004">
+<area shape="rect" id="node7" href="container_groups_container_services.html" target="_top" title="container_groups_container_services" alt="" coords="1320,671,1684,759">
+<area shape="rect" id="node8" href="container_services.html" target="_top" title="container_services" alt="" coords="305,1055,532,1143">
+<area shape="rect" id="node9" href="container_limits.html" target="_top" title="container_limits" alt="" coords="313,844,524,932">
+<area shape="rect" id="node10" href="container_quotas.html" target="_top" title="container_quotas" alt="" coords="309,949,528,1037">
+<area shape="rect" id="node11" href="container_routes.html" target="_top" title="container_routes" alt="" coords="689,1021,904,1109">
+<area shape="rect" id="node12" href="container_templates.html" target="_top" title="container_templates" alt="" coords="297,1160,541,1248">
+<area shape="rect" id="node13" href="containers.html" target="_top" title="containers" alt="" coords="1419,451,1585,539">
+<area shape="rect" id="node14" href="event_streams.html" target="_top" title="event_streams" alt="" coords="1728,20,1991,724">
+<area shape="rect" id="node15" href="availability_zones.html" target="_top" title="availability_zones" alt="" coords="1044,111,1265,199">
+<area shape="rect" id="node16" href="ems_clusters.html" target="_top" title="ems_clusters" alt="" coords="1063,5,1246,93">
+<area shape="rect" id="node17" href="hosts.html" target="_top" title="hosts" alt="" coords="1439,111,1565,199">
+<area shape="rect" id="node18" href="physical_servers.html" target="_top" title="physical_servers" alt="" coords="1049,216,1260,304">
+<area shape="rect" id="node19" href="physical_storages.html" target="_top" title="physical_storages" alt="" coords="1393,987,1611,1075">
+<area shape="rect" id="node20" href="tenants.html" target="_top" title="tenants" alt="" coords="1429,881,1575,969">
+<area shape="rect" id="node21" href="users.html" target="_top" title="users" alt="" coords="1439,776,1565,864">
+<area shape="rect" id="node22" href="persistent_volume_claims.html" target="_top" title="persistent_volume_claims" alt="" coords="277,1265,560,1353">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/container_replicators.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

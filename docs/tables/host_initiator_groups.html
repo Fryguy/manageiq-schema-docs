@@ -111,6 +111,14 @@
                                     <td>nextval(&#39;host_initiator_groups_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="host_initiators.host_initiator_group_id references host_initiator_groups.id"><a href='host_initiators.html'>host_initiators</a><span class='relatedKey'>.host_initiator_group_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="volume_mappings.host_initiator_group_id references host_initiator_groups.id"><a href='volume_mappings.html'>volume_mappings</a><span class='relatedKey'>.host_initiator_group_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -137,7 +145,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="physical_storage_id">physical_storage_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="physical_storage_id">physical_storage_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -149,6 +157,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="host_initiator_groups.physical_storage_id references physical_storages.id"><a href='physical_storages.html'>physical_storages</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -318,10 +330,52 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="host_initiator_groups.html" target="_top" title="host_initiator_groups" alt="" coords="309,151,693,513">
+<area shape="rect" id="node2" href="physical_storages.html" target="_top" title="physical_storages" alt="" coords="5,144,265,320">
+<area shape="rect" id="node3" href="host_initiators.html" target="_top" title="host_initiators" alt="" coords="737,16,969,221">
+<area shape="rect" id="node4" href="volume_mappings.html" target="_top" title="volume_mappings" alt="" coords="1013,5,1245,240">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/host_initiator_groups.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="canisters.html" target="_top" title="canisters" alt="" coords="747,741,901,829">
+<area shape="rect" id="node2" href="physical_storages.html" target="_top" title="physical_storages" alt="" coords="328,597,588,773">
+<area shape="rect" id="node9" href="physical_racks.html" target="_top" title="physical_racks" alt="" coords="47,591,242,679">
+<area shape="rect" id="node10" href="physical_storage_families.html" target="_top" title="physical_storage_families" alt="" coords="5,696,284,784">
+<area shape="rect" id="node3" href="cloud_volumes.html" target="_top" title="cloud_volumes" alt="" coords="1077,5,1275,93">
+<area shape="rect" id="node4" href="storage_resources.html" target="_top" title="storage_resources" alt="" coords="713,29,935,117">
+<area shape="rect" id="node5" href="event_streams.html" target="_top" title="event_streams" alt="" coords="725,600,923,688">
+<area shape="rect" id="node6" href="host_initiator_groups.html" target="_top" title="host_initiator_groups" alt="" coords="632,220,1016,583">
+<area shape="rect" id="node7" href="host_initiators.html" target="_top" title="host_initiators" alt="" coords="1060,111,1292,316">
+<area shape="rect" id="node8" href="physical_disks.html" target="_top" title="physical_disks" alt="" coords="1079,704,1273,792">
+<area shape="rect" id="node11" href="volume_mappings.html" target="_top" title="volume_mappings" alt="" coords="1336,23,1568,257">
+<area shape="rect" id="node12" href="wwpn_candidates.html" target="_top" title="wwpn_candidates" alt="" coords="713,847,935,935">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/host_initiator_groups.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

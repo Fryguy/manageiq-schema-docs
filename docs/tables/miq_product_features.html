@@ -111,6 +111,14 @@
                                     <td>nextval(&#39;miq_product_features_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="miq_product_features_shares.miq_product_feature_id references miq_product_features.id"><a href='miq_product_features_shares.html'>miq_product_features_shares</a><span class='relatedKey'>.miq_product_feature_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="miq_roles_features.miq_product_feature_id references miq_product_features.id"><a href='miq_roles_features.html'>miq_roles_features</a><span class='relatedKey'>.miq_product_feature_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -273,7 +281,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="tenant_id">tenant_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="tenant_id">tenant_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -285,6 +293,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="miq_product_features.tenant_id references tenants.id"><a href='tenants.html'>tenants</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -335,10 +347,64 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="miq_product_features.html" target="_top" title="miq_product_features" alt="" coords="299,131,688,523">
+<area shape="rect" id="node2" href="tenants.html" target="_top" title="tenants" alt="" coords="5,427,255,691">
+<area shape="rect" id="node3" href="miq_product_features_shares.html" target="_top" title="miq_product_features_shares" alt="" coords="732,5,1040,157">
+<area shape="rect" id="node4" href="miq_roles_features.html" target="_top" title="miq_roles_features" alt="" coords="767,175,1005,327">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/miq_product_features.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="authentications.html" target="_top" title="authentications" alt="" coords="782,147,990,235">
+<area shape="rect" id="node2" href="miq_groups.html" target="_top" title="miq_groups" alt="" coords="407,252,580,340">
+<area shape="rect" id="node3" href="tenants.html" target="_top" title="tenants" alt="" coords="5,691,255,955">
+<area shape="rect" id="node4" href="automate_workspaces.html" target="_top" title="automate_workspaces" alt="" coords="366,357,621,445">
+<area shape="rect" id="node5" href="event_streams.html" target="_top" title="event_streams" alt="" coords="395,463,592,551">
+<area shape="rect" id="node6" href="ext_management_systems.html" target="_top" title="ext_management_systems" alt="" coords="743,1020,1029,1108">
+<area shape="rect" id="node7" href="providers.html" target="_top" title="providers" alt="" coords="414,992,573,1080">
+<area shape="rect" id="node8" href="miq_ae_namespaces.html" target="_top" title="miq_ae_namespaces" alt="" coords="374,640,613,728">
+<area shape="rect" id="node9" href="miq_product_features.html" target="_top" title="miq_product_features" alt="" coords="299,1239,688,1631">
+<area shape="rect" id="node10" href="miq_product_features_shares.html" target="_top" title="miq_product_features_shares" alt="" coords="732,1183,1040,1335">
+<area shape="rect" id="node11" href="shares.html" target="_top" title="shares" alt="" coords="426,1133,561,1221">
+<area shape="rect" id="node12" href="miq_queue.html" target="_top" title="miq_queue" alt="" coords="408,887,579,975">
+<area shape="rect" id="node13" href="miq_request_tasks.html" target="_top" title="miq_request_tasks" alt="" coords="1112,1752,1339,1840">
+<area shape="rect" id="node14" href="miq_requests.html" target="_top" title="miq_requests" alt="" coords="792,1789,980,1877">
+<area shape="rect" id="node15" href="service_orders.html" target="_top" title="service_orders" alt="" coords="396,1789,591,1877">
+<area shape="rect" id="node16" href="miq_roles_features.html" target="_top" title="miq_roles_features" alt="" coords="767,1511,1005,1663">
+<area shape="rect" id="node17" href="miq_user_roles.html" target="_top" title="miq_user_roles" alt="" coords="394,1648,593,1736">
+<area shape="rect" id="node18" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="765,252,1007,340">
+<area shape="rect" id="node19" href="service_template_catalogs.html" target="_top" title="service_template_catalogs" alt="" coords="351,745,636,833">
+<area shape="rect" id="node20" href="service_template_tenants.html" target="_top" title="service_template_tenants" alt="" coords="1084,532,1367,620">
+<area shape="rect" id="node21" href="service_templates.html" target="_top" title="service_templates" alt="" coords="774,640,998,728">
+<area shape="rect" id="node22" href="services.html" target="_top" title="services" alt="" coords="1152,640,1299,728">
+<area shape="rect" id="node23" href="tenant_quotas.html" target="_top" title="tenant_quotas" alt="" coords="395,5,591,93">
+<area shape="rect" id="node24" href="vms.html" target="_top" title="vms" alt="" coords="1167,252,1284,340">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/miq_product_features.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

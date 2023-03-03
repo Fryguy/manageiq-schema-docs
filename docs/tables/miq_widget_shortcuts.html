@@ -137,7 +137,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="miq_shortcut_id">miq_shortcut_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="miq_shortcut_id">miq_shortcut_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -149,12 +149,16 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="miq_widget_shortcuts.miq_shortcut_id references miq_shortcuts.id"><a href='miq_shortcuts.html'>miq_shortcuts</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="miq_widget_id">miq_widget_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="miq_widget_id">miq_widget_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -166,6 +170,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="miq_widget_shortcuts.miq_widget_id references miq_widgets.id"><a href='miq_widgets.html'>miq_widgets</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -221,10 +229,46 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="miq_widget_shortcuts.html" target="_top" title="miq_widget_shortcuts" alt="" coords="312,5,701,221">
+<area shape="rect" id="node2" href="miq_shortcuts.html" target="_top" title="miq_shortcuts" alt="" coords="36,13,237,131">
+<area shape="rect" id="node3" href="miq_widgets.html" target="_top" title="miq_widgets" alt="" coords="5,148,268,412">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/miq_widget_shortcuts.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="miq_widget_contents.html" target="_top" title="miq_widget_contents" alt="" coords="625,21,871,109">
+<area shape="rect" id="node2" href="miq_widgets.html" target="_top" title="miq_widgets" alt="" coords="247,56,509,320">
+<area shape="rect" id="node3" href="users.html" target="_top" title="users" alt="" coords="41,5,167,93">
+<area shape="rect" id="node6" href="miq_schedules.html" target="_top" title="miq_schedules" alt="" coords="5,155,203,243">
+<area shape="rect" id="node7" href="miq_tasks.html" target="_top" title="miq_tasks" alt="" coords="23,260,185,348">
+<area shape="rect" id="node4" href="miq_widget_shortcuts.html" target="_top" title="miq_widget_shortcuts" alt="" coords="553,183,943,399">
+<area shape="rect" id="node5" href="miq_shortcuts.html" target="_top" title="miq_shortcuts" alt="" coords="277,337,479,455">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/miq_widget_shortcuts.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

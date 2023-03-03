@@ -111,6 +111,26 @@
                                     <td>nextval(&#39;configuration_profiles_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="configuration_locations_configuration_profiles.configuration_profile_id references configuration_profiles.id"><a href='configuration_locations_configuration_profiles.html'>configuration_locations_configuration_profiles</a><span class='relatedKey'>.configuration_profile_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="configuration_organizations_configuration_profiles.configuration_profile_id references configuration_profiles.id"><a href='configuration_organizations_configuration_profiles.html'>configuration_organizations_configuration_profiles</a><span class='relatedKey'>.configuration_profile_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="configuration_profiles_configuration_tags.configuration_profile_id references configuration_profiles.id"><a href='configuration_profiles_configuration_tags.html'>configuration_profiles_configuration_tags</a><span class='relatedKey'>.configuration_profile_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="configured_systems.configuration_profile_id references configuration_profiles.id"><a href='configured_systems.html'>configured_systems</a><span class='relatedKey'>.configuration_profile_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="direct_configuration_profiles_configuration_tags.configuration_profile_id references configuration_profiles.id"><a href='direct_configuration_profiles_configuration_tags.html'>direct_configuration_profiles_configuration_tags</a><span class='relatedKey'>.configuration_profile_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -324,7 +344,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="operating_system_flavor_id">operating_system_flavor_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="operating_system_flavor_id">operating_system_flavor_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -336,6 +356,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="configuration_profiles.operating_system_flavor_id references operating_system_flavors.id"><a href='operating_system_flavors.html'>operating_system_flavors</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -461,10 +485,57 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="configuration_locations_configuration_profiles.html" target="_top" title="configuration_locations_configuration_profiles" alt="" coords="916,5,1351,157">
+<area shape="rect" id="node2" href="configuration_profiles.html" target="_top" title="configuration_profiles" alt="" coords="327,372,856,940">
+<area shape="rect" id="node4" href="operating_system_flavors.html" target="_top" title="operating_system_flavors" alt="" coords="5,837,283,1013">
+<area shape="rect" id="node3" href="configuration_organizations_configuration_profiles.html" target="_top" title="configuration_organizations_configuration_profiles" alt="" coords="900,175,1367,327">
+<area shape="rect" id="node5" href="configuration_profiles_configuration_tags.html" target="_top" title="configuration_profiles_configuration_tags" alt="" coords="935,344,1331,496">
+<area shape="rect" id="node6" href="configured_systems.html" target="_top" title="configured_systems" alt="" coords="952,683,1315,1123">
+<area shape="rect" id="node7" href="direct_configuration_profiles_configuration_tags.html" target="_top" title="direct_configuration_profiles_configuration_tags" alt="" coords="909,513,1357,665">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/configuration_profiles.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="configuration_locations_configuration_profiles.html" target="_top" title="configuration_locations_configuration_profiles" alt="" coords="916,127,1351,279">
+<area shape="rect" id="node2" href="configuration_locations.html" target="_top" title="configuration_locations" alt="" coords="460,597,723,685">
+<area shape="rect" id="node3" href="configuration_profiles.html" target="_top" title="configuration_profiles" alt="" coords="327,12,856,580">
+<area shape="rect" id="node6" href="operating_system_flavors.html" target="_top" title="operating_system_flavors" alt="" coords="5,700,283,876">
+<area shape="rect" id="node4" href="configuration_organizations_configuration_profiles.html" target="_top" title="configuration_organizations_configuration_profiles" alt="" coords="900,401,1367,553">
+<area shape="rect" id="node5" href="configuration_organizations.html" target="_top" title="configuration_organizations" alt="" coords="443,808,739,896">
+<area shape="rect" id="node7" href="configuration_profiles_configuration_tags.html" target="_top" title="configuration_profiles_configuration_tags" alt="" coords="1437,5,1833,157">
+<area shape="rect" id="node8" href="configuration_tags.html" target="_top" title="configuration_tags" alt="" coords="1021,296,1246,384">
+<area shape="rect" id="node9" href="configuration_tags_configured_systems.html" target="_top" title="configuration_tags_configured_systems" alt="" coords="1445,552,1824,640">
+<area shape="rect" id="node10" href="configured_systems.html" target="_top" title="configured_systems" alt="" coords="952,571,1315,1011">
+<area shape="rect" id="node11" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="470,949,713,1037">
+<area shape="rect" id="node12" href="customization_scripts_operating_system_flavors.html" target="_top" title="customization_scripts_operating_system_flavors" alt="" coords="367,703,815,791">
+<area shape="rect" id="node13" href="direct_configuration_profiles_configuration_tags.html" target="_top" title="direct_configuration_profiles_configuration_tags" alt="" coords="1411,215,1859,367">
+<area shape="rect" id="node14" href="direct_configuration_tags_configured_systems.html" target="_top" title="direct_configuration_tags_configured_systems" alt="" coords="1419,405,1850,493">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/configuration_profiles.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

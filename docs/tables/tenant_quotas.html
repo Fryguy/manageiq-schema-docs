@@ -120,7 +120,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="tenant_id">tenant_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="tenant_id">tenant_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -132,6 +132,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="tenant_quotas.tenant_id references tenants.id"><a href='tenants.html'>tenants</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -272,10 +276,59 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tenant_quotas.html" target="_top" title="tenant_quotas" alt="" coords="299,5,629,309">
+<area shape="rect" id="node2" href="tenants.html" target="_top" title="tenants" alt="" coords="5,37,255,301">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/tenant_quotas.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="authentications.html" target="_top" title="authentications" alt="" coords="712,110,920,198">
+<area shape="rect" id="node2" href="miq_groups.html" target="_top" title="miq_groups" alt="" coords="377,339,551,427">
+<area shape="rect" id="node3" href="tenants.html" target="_top" title="tenants" alt="" coords="5,758,255,1022">
+<area shape="rect" id="node4" href="automate_workspaces.html" target="_top" title="automate_workspaces" alt="" coords="337,93,591,181">
+<area shape="rect" id="node5" href="event_streams.html" target="_top" title="event_streams" alt="" coords="365,198,563,286">
+<area shape="rect" id="node6" href="ext_management_systems.html" target="_top" title="ext_management_systems" alt="" coords="673,814,959,902">
+<area shape="rect" id="node7" href="providers.html" target="_top" title="providers" alt="" coords="385,797,543,885">
+<area shape="rect" id="node8" href="miq_ae_namespaces.html" target="_top" title="miq_ae_namespaces" alt="" coords="345,445,583,533">
+<area shape="rect" id="node9" href="miq_product_features.html" target="_top" title="miq_product_features" alt="" coords="337,550,591,638">
+<area shape="rect" id="node10" href="miq_queue.html" target="_top" title="miq_queue" alt="" coords="379,655,549,743">
+<area shape="rect" id="node11" href="miq_request_tasks.html" target="_top" title="miq_request_tasks" alt="" coords="1031,1114,1257,1202">
+<area shape="rect" id="node12" href="miq_requests.html" target="_top" title="miq_requests" alt="" coords="722,1151,910,1239">
+<area shape="rect" id="node13" href="service_orders.html" target="_top" title="service_orders" alt="" coords="367,1151,561,1239">
+<area shape="rect" id="node14" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="695,267,937,355">
+<area shape="rect" id="node15" href="service_template_catalogs.html" target="_top" title="service_template_catalogs" alt="" coords="321,938,607,1026">
+<area shape="rect" id="node16" href="service_template_tenants.html" target="_top" title="service_template_tenants" alt="" coords="1003,1007,1285,1095">
+<area shape="rect" id="node17" href="service_templates.html" target="_top" title="service_templates" alt="" coords="704,938,928,1026">
+<area shape="rect" id="node18" href="services.html" target="_top" title="services" alt="" coords="1071,723,1217,811">
+<area shape="rect" id="node19" href="shares.html" target="_top" title="shares" alt="" coords="397,1257,531,1345">
+<area shape="rect" id="node20" href="tenant_quotas.html" target="_top" title="tenant_quotas" alt="" coords="299,1362,629,1666">
+<area shape="rect" id="node21" href="vms.html" target="_top" title="vms" alt="" coords="1085,267,1203,355">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/tenant_quotas.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

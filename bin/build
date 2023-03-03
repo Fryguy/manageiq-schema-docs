@@ -1,4 +1,4 @@
 #!/bin/bash
 
 rm -rf docs/*
-docker run --rm -it -p 5432:5432 -v "$PWD/docs:/output" -v "$PWD/schema.properties:/schemaspy.properties:ro" -v "$PWD/schemameta.xml:/schemameta.xml:ro" schemaspy/schemaspy "$@"
+docker run --rm -it -p 5432:5432 -v "$PWD/docs:/output" -v "$PWD/schema.properties:/schemaspy.properties:ro" -v "$PWD/schemameta.xml:/schemameta.xml:ro" schemaspy/schemaspy -rails "$@"

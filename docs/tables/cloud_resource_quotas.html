@@ -222,7 +222,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="cloud_tenant_id">cloud_tenant_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="cloud_tenant_id">cloud_tenant_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -234,6 +234,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="cloud_resource_quotas.cloud_tenant_id references cloud_tenants.id"><a href='cloud_tenants.html'>cloud_tenants</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -312,10 +316,64 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="cloud_resource_quotas.html" target="_top" title="cloud_resource_quotas" alt="" coords="243,5,640,368">
+<area shape="rect" id="node2" href="cloud_tenants.html" target="_top" title="cloud_tenants" alt="" coords="5,213,199,360">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/cloud_resource_quotas.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="cloud_databases.html" target="_top" title="cloud_databases" alt="" coords="336,5,547,93">
+<area shape="rect" id="node2" href="cloud_tenants.html" target="_top" title="cloud_tenants" alt="" coords="5,1019,199,1165">
+<area shape="rect" id="node3" href="cloud_networks.html" target="_top" title="cloud_networks" alt="" coords="725,740,931,828">
+<area shape="rect" id="node4" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="320,881,563,969">
+<area shape="rect" id="node5" href="cloud_object_store_containers.html" target="_top" title="cloud_object_store_containers" alt="" coords="284,147,599,235">
+<area shape="rect" id="node6" href="cloud_object_store_objects.html" target="_top" title="cloud_object_store_objects" alt="" coords="684,164,972,252">
+<area shape="rect" id="node7" href="cloud_resource_quotas.html" target="_top" title="cloud_resource_quotas" alt="" coords="243,324,640,687">
+<area shape="rect" id="node8" href="cloud_subnets.html" target="_top" title="cloud_subnets" alt="" coords="1381,840,1575,928">
+<area shape="rect" id="node9" href="network_routers.html" target="_top" title="network_routers" alt="" coords="1063,627,1275,715">
+<area shape="rect" id="node10" href="cloud_tenant_flavors.html" target="_top" title="cloud_tenant_flavors" alt="" coords="320,776,563,864">
+<area shape="rect" id="node11" href="cloud_tenants_vms.html" target="_top" title="cloud_tenants_vms" alt="" coords="1923,1016,2154,1104">
+<area shape="rect" id="node12" href="vms.html" target="_top" title="vms" alt="" coords="1679,980,1796,1068">
+<area shape="rect" id="node23" href="placement_groups.html" target="_top" title="placement_groups" alt="" coords="1365,1017,1591,1105">
+<area shape="rect" id="node13" href="cloud_volume_snapshots.html" target="_top" title="cloud_volume_snapshots" alt="" coords="691,1131,965,1219">
+<area shape="rect" id="node14" href="cloud_volumes.html" target="_top" title="cloud_volumes" alt="" coords="342,1131,541,1219">
+<area shape="rect" id="node15" href="floating_ips.html" target="_top" title="floating_ips" alt="" coords="1953,623,2125,711">
+<area shape="rect" id="node16" href="network_ports.html" target="_top" title="network_ports" alt="" coords="1639,1240,1835,1328">
+<area shape="rect" id="node17" href="load_balancer_health_checks.html" target="_top" title="load_balancer_health_checks" alt="" coords="1016,1395,1321,1483">
+<area shape="rect" id="node18" href="load_balancers.html" target="_top" title="load_balancers" alt="" coords="342,1344,541,1432">
+<area shape="rect" id="node19" href="load_balancer_listeners.html" target="_top" title="load_balancer_listeners" alt="" coords="696,1327,960,1415">
+<area shape="rect" id="node20" href="load_balancer_pool_members.html" target="_top" title="load_balancer_pool_members" alt="" coords="1884,1200,2193,1288">
+<area shape="rect" id="node21" href="load_balancer_pools.html" target="_top" title="load_balancer_pools" alt="" coords="322,1449,561,1537">
+<area shape="rect" id="node22" href="network_services.html" target="_top" title="network_services" alt="" coords="333,1555,550,1643">
+<area shape="rect" id="node24" href="security_groups.html" target="_top" title="security_groups" alt="" coords="1635,731,1840,819">
+<area shape="rect" id="node25" href="security_policies.html" target="_top" title="security_policies" alt="" coords="335,1768,547,1856">
+<area shape="rect" id="node26" href="security_policy_rules.html" target="_top" title="security_policy_rules" alt="" coords="706,1749,950,1837">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/cloud_resource_quotas.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

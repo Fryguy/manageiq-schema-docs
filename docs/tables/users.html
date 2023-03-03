@@ -111,6 +111,66 @@
                                     <td>nextval(&#39;users_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="automate_workspaces.user_id references users.id"><a href='automate_workspaces.html'>automate_workspaces</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="event_streams.user_id references users.id"><a href='event_streams.html'>event_streams</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="external_urls.user_id references users.id"><a href='external_urls.html'>external_urls</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="miq_alert_status_actions.user_id references users.id"><a href='miq_alert_status_actions.html'>miq_alert_status_actions</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="miq_groups_users.user_id references users.id"><a href='miq_groups_users.html'>miq_groups_users</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="miq_queue.user_id references users.id"><a href='miq_queue.html'>miq_queue</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="miq_reports.user_id references users.id"><a href='miq_reports.html'>miq_reports</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="miq_widget_contents.user_id references users.id"><a href='miq_widget_contents.html'>miq_widget_contents</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="miq_widgets.user_id references users.id"><a href='miq_widgets.html'>miq_widgets</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="notification_recipients.user_id references users.id"><a href='notification_recipients.html'>notification_recipients</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="notifications.user_id references users.id"><a href='notifications.html'>notifications</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="service_orders.user_id references users.id"><a href='service_orders.html'>service_orders</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="sessions.user_id references users.id"><a href='sessions.html'>sessions</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="shares.user_id references users.id"><a href='shares.html'>shares</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="system_consoles.user_id references users.id"><a href='system_consoles.html'>system_consoles</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -403,10 +463,89 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="automate_workspaces.html" target="_top" title="automate_workspaces" alt="" coords="445,5,700,181">
+<area shape="rect" id="node2" href="users.html" target="_top" title="users" alt="" coords="5,2447,392,2956">
+<area shape="rect" id="node3" href="event_streams.html" target="_top" title="event_streams" alt="" coords="441,199,704,903">
+<area shape="rect" id="node4" href="external_urls.html" target="_top" title="external_urls" alt="" coords="479,920,666,1125">
+<area shape="rect" id="node5" href="miq_alert_status_actions.html" target="_top" title="miq_alert_status_actions" alt="" coords="436,1143,709,1348">
+<area shape="rect" id="node6" href="miq_groups_users.html" target="_top" title="miq_groups_users" alt="" coords="463,1365,682,1517">
+<area shape="rect" id="node7" href="miq_queue.html" target="_top" title="miq_queue" alt="" coords="487,1535,658,2092">
+<area shape="rect" id="node8" href="miq_reports.html" target="_top" title="miq_reports" alt="" coords="483,2109,662,2403">
+<area shape="rect" id="node9" href="miq_widget_contents.html" target="_top" title="miq_widget_contents" alt="" coords="759,2468,1006,2703">
+<area shape="rect" id="node10" href="miq_widgets.html" target="_top" title="miq_widgets" alt="" coords="441,2420,704,2684">
+<area shape="rect" id="node11" href="notification_recipients.html" target="_top" title="notification_recipients" alt="" coords="753,2796,1012,2972">
+<area shape="rect" id="node12" href="notifications.html" target="_top" title="notifications" alt="" coords="470,2737,675,3031">
+<area shape="rect" id="node13" href="service_orders.html" target="_top" title="service_orders" alt="" coords="475,3084,670,3260">
+<area shape="rect" id="node14" href="sessions.html" target="_top" title="sessions" alt="" coords="499,3277,646,3483">
+<area shape="rect" id="node15" href="shares.html" target="_top" title="shares" alt="" coords="447,3500,698,3735">
+<area shape="rect" id="node16" href="system_consoles.html" target="_top" title="system_consoles" alt="" coords="467,3752,678,3957">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/users.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="automate_workspaces.html" target="_top" title="automate_workspaces" alt="" coords="1004,3615,1259,3791">
+<area shape="rect" id="node2" href="tenants.html" target="_top" title="tenants" alt="" coords="337,2812,482,2900">
+<area shape="rect" id="node3" href="users.html" target="_top" title="users" alt="" coords="564,2588,951,3097">
+<area shape="rect" id="node4" href="container_groups.html" target="_top" title="container_groups" alt="" coords="301,327,518,415">
+<area shape="rect" id="node5" href="container_nodes.html" target="_top" title="container_nodes" alt="" coords="25,281,235,369">
+<area shape="rect" id="node6" href="container_replicators.html" target="_top" title="container_replicators" alt="" coords="5,419,255,507">
+<area shape="rect" id="node7" href="containers.html" target="_top" title="containers" alt="" coords="674,381,841,469">
+<area shape="rect" id="node8" href="event_streams.html" target="_top" title="event_streams" alt="" coords="1000,5,1263,709">
+<area shape="rect" id="node9" href="availability_zones.html" target="_top" title="availability_zones" alt="" coords="299,733,520,821">
+<area shape="rect" id="node10" href="ems_clusters.html" target="_top" title="ems_clusters" alt="" coords="318,628,501,716">
+<area shape="rect" id="node11" href="hosts.html" target="_top" title="hosts" alt="" coords="694,559,821,647">
+<area shape="rect" id="node12" href="physical_servers.html" target="_top" title="physical_servers" alt="" coords="304,523,515,611">
+<area shape="rect" id="node13" href="physical_storages.html" target="_top" title="physical_storages" alt="" coords="648,736,867,824">
+<area shape="rect" id="node14" href="external_urls.html" target="_top" title="external_urls" alt="" coords="1038,2757,1225,2963">
+<area shape="rect" id="node15" href="miq_alert_status_actions.html" target="_top" title="miq_alert_status_actions" alt="" coords="995,1724,1268,1929">
+<area shape="rect" id="node16" href="miq_alert_statuses.html" target="_top" title="miq_alert_statuses" alt="" coords="643,1815,871,1903">
+<area shape="rect" id="node17" href="miq_groups.html" target="_top" title="miq_groups" alt="" coords="671,2232,844,2320">
+<area shape="rect" id="node18" href="miq_groups_users.html" target="_top" title="miq_groups_users" alt="" coords="1022,2329,1241,2481">
+<area shape="rect" id="node19" href="miq_product_features_shares.html" target="_top" title="miq_product_features_shares" alt="" coords="1312,3365,1620,3453">
+<area shape="rect" id="node20" href="shares.html" target="_top" title="shares" alt="" coords="1006,3363,1257,3597">
+<area shape="rect" id="node21" href="miq_queue.html" target="_top" title="miq_queue" alt="" coords="1046,1149,1217,1707">
+<area shape="rect" id="node22" href="miq_tasks.html" target="_top" title="miq_tasks" alt="" coords="677,1076,838,1164">
+<area shape="rect" id="node23" href="miq_report_results.html" target="_top" title="miq_report_results" alt="" coords="1351,1948,1581,2036">
+<area shape="rect" id="node24" href="miq_reports.html" target="_top" title="miq_reports" alt="" coords="1042,1983,1221,2276">
+<area shape="rect" id="node25" href="time_profiles.html" target="_top" title="time_profiles" alt="" coords="665,2103,850,2191">
+<area shape="rect" id="node26" href="miq_requests.html" target="_top" title="miq_requests" alt="" coords="1372,3887,1560,3975">
+<area shape="rect" id="node27" href="service_orders.html" target="_top" title="service_orders" alt="" coords="1034,3808,1229,3984">
+<area shape="rect" id="node28" href="miq_widget_contents.html" target="_top" title="miq_widget_contents" alt="" coords="1664,2027,1911,2261">
+<area shape="rect" id="node29" href="miq_widgets.html" target="_top" title="miq_widgets" alt="" coords="1000,832,1263,1096">
+<area shape="rect" id="node31" href="miq_schedules.html" target="_top" title="miq_schedules" alt="" coords="659,952,856,1040">
+<area shape="rect" id="node30" href="miq_widget_shortcuts.html" target="_top" title="miq_widget_shortcuts" alt="" coords="1340,835,1592,923">
+<area shape="rect" id="node32" href="notification_recipients.html" target="_top" title="notification_recipients" alt="" coords="1337,3019,1595,3195">
+<area shape="rect" id="node33" href="notifications.html" target="_top" title="notifications" alt="" coords="1029,3052,1234,3345">
+<area shape="rect" id="node34" href="notification_types.html" target="_top" title="notification_types" alt="" coords="646,3115,869,3203">
+<area shape="rect" id="node35" href="sessions.html" target="_top" title="sessions" alt="" coords="1058,2535,1205,2740">
+<area shape="rect" id="node36" href="system_consoles.html" target="_top" title="system_consoles" alt="" coords="1361,1100,1571,1305">
+<area shape="rect" id="node37" href="vms.html" target="_top" title="vms" alt="" coords="1073,727,1190,815">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/users.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

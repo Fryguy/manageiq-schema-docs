@@ -188,7 +188,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="miq_task_id">miq_task_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="miq_task_id">miq_task_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -200,6 +200,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="log_files.miq_task_id references miq_tasks.id"><a href='miq_tasks.html'>miq_tasks</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -324,7 +328,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="file_depot_id">file_depot_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="file_depot_id">file_depot_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -336,6 +340,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="log_files.file_depot_id references file_depots.id"><a href='file_depots.html'>file_depots</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -403,10 +411,48 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="log_files.html" target="_top" title="log_files" alt="" coords="268,5,632,515">
+<area shape="rect" id="node2" href="file_depots.html" target="_top" title="file_depots" alt="" coords="5,389,224,536">
+<area shape="rect" id="node3" href="miq_tasks.html" target="_top" title="miq_tasks" alt="" coords="34,155,195,301">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/log_files.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="jobs.html" target="_top" title="jobs" alt="" coords="633,5,750,93">
+<area shape="rect" id="node2" href="miq_servers.html" target="_top" title="miq_servers" alt="" coords="26,127,203,215">
+<area shape="rect" id="node3" href="miq_tasks.html" target="_top" title="miq_tasks" alt="" coords="286,180,447,327">
+<area shape="rect" id="node4" href="log_files.html" target="_top" title="log_files" alt="" coords="509,321,873,831">
+<area shape="rect" id="node5" href="file_depots.html" target="_top" title="file_depots" alt="" coords="5,775,224,921">
+<area shape="rect" id="node6" href="miq_queue.html" target="_top" title="miq_queue" alt="" coords="606,216,777,304">
+<area shape="rect" id="node7" href="miq_report_results.html" target="_top" title="miq_report_results" alt="" coords="577,111,806,199">
+<area shape="rect" id="node8" href="miq_schedules.html" target="_top" title="miq_schedules" alt="" coords="268,831,465,919">
+<area shape="rect" id="node9" href="miq_widgets.html" target="_top" title="miq_widgets" alt="" coords="601,848,782,936">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/log_files.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

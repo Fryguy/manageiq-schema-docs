@@ -120,7 +120,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="storage_id">storage_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="storage_id">storage_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -132,12 +132,16 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="host_storages.storage_id references storages.id"><a href='storages.html'>storages</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="host_id">host_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="host_id">host_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -149,6 +153,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="host_storages.host_id references hosts.id"><a href='hosts.html'>hosts</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -227,10 +235,65 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="host_storages.html" target="_top" title="host_storages" alt="" coords="344,71,603,287">
+<area shape="rect" id="node2" href="hosts.html" target="_top" title="hosts" alt="" coords="33,228,272,580">
+<area shape="rect" id="node3" href="storages.html" target="_top" title="storages" alt="" coords="5,5,300,211">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/host_storages.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="accounts.html" target="_top" title="accounts" alt="" coords="685,884,839,972">
+<area shape="rect" id="node2" href="hosts.html" target="_top" title="hosts" alt="" coords="299,542,537,894">
+<area shape="rect" id="node4" href="availability_zones.html" target="_top" title="availability_zones" alt="" coords="5,323,227,411">
+<area shape="rect" id="node10" href="ems_clusters.html" target="_top" title="ems_clusters" alt="" coords="25,943,207,1031">
+<area shape="rect" id="node11" href="physical_servers.html" target="_top" title="physical_servers" alt="" coords="11,662,221,750">
+<area shape="rect" id="node3" href="cloud_services.html" target="_top" title="cloud_services" alt="" coords="1209,144,1404,232">
+<area shape="rect" id="node5" href="system_services.html" target="_top" title="system_services" alt="" coords="959,144,1165,232">
+<area shape="rect" id="node15" href="host_service_groups.html" target="_top" title="host_service_groups" alt="" coords="644,180,880,268">
+<area shape="rect" id="node6" href="disks.html" target="_top" title="disks" alt="" coords="1245,1403,1369,1491">
+<area shape="rect" id="node7" href="hardwares.html" target="_top" title="hardwares" alt="" coords="979,952,1145,1040">
+<area shape="rect" id="node8" href="storages.html" target="_top" title="storages" alt="" coords="271,1626,565,1831">
+<area shape="rect" id="node13" href="switches.html" target="_top" title="switches" alt="" coords="686,568,838,656">
+<area shape="rect" id="node9" href="event_streams.html" target="_top" title="event_streams" alt="" coords="663,39,861,127">
+<area shape="rect" id="node12" href="guest_applications.html" target="_top" title="guest_applications" alt="" coords="649,322,875,410">
+<area shape="rect" id="node14" href="host_aggregate_hosts.html" target="_top" title="host_aggregate_hosts" alt="" coords="639,427,885,515">
+<area shape="rect" id="node16" href="host_storages.html" target="_top" title="host_storages" alt="" coords="633,1131,891,1347">
+<area shape="rect" id="node17" href="host_switches.html" target="_top" title="host_switches" alt="" coords="967,532,1157,620">
+<area shape="rect" id="node18" href="iso_images.html" target="_top" title="iso_images" alt="" coords="679,1575,845,1663">
+<area shape="rect" id="node19" href="operating_systems.html" target="_top" title="operating_systems" alt="" coords="649,674,875,762">
+<area shape="rect" id="node20" href="patches.html" target="_top" title="patches" alt="" coords="689,779,835,867">
+<area shape="rect" id="node21" href="policy_events.html" target="_top" title="policy_events" alt="" coords="667,1026,857,1114">
+<area shape="rect" id="node22" href="repositories.html" target="_top" title="repositories" alt="" coords="673,1680,851,1768">
+<area shape="rect" id="node23" href="storage_files.html" target="_top" title="storage_files" alt="" coords="673,1786,851,1874">
+<area shape="rect" id="node24" href="storage_profile_storages.html" target="_top" title="storage_profile_storages" alt="" coords="629,1927,895,2015">
+<area shape="rect" id="node25" href="storages_vms_and_templates.html" target="_top" title="storages_vms_and_templates" alt="" coords="609,1470,915,1558">
+<area shape="rect" id="node26" href="vms.html" target="_top" title="vms" alt="" coords="703,1364,821,1452">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/host_storages.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

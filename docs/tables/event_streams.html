@@ -188,7 +188,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="host_id">host_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="host_id">host_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -200,6 +200,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="event_streams.host_id references hosts.id"><a href='hosts.html'>hosts</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -460,7 +464,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="ems_cluster_id">ems_cluster_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="ems_cluster_id">ems_cluster_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -472,6 +476,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="event_streams.ems_cluster_id references ems_clusters.id"><a href='ems_clusters.html'>ems_clusters</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -562,7 +570,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="availability_zone_id">availability_zone_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="availability_zone_id">availability_zone_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -574,12 +582,16 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="event_streams.availability_zone_id references availability_zones.id"><a href='availability_zones.html'>availability_zones</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="container_node_id">container_node_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="container_node_id">container_node_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -591,6 +603,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="event_streams.container_node_id references container_nodes.id"><a href='container_nodes.html'>container_nodes</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -613,7 +629,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="container_group_id">container_group_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="container_group_id">container_group_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -625,6 +641,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="event_streams.container_group_id references container_groups.id"><a href='container_groups.html'>container_groups</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -715,7 +735,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="container_id">container_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="container_id">container_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -727,6 +747,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="event_streams.container_id references containers.id"><a href='containers.html'>containers</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -749,7 +773,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="container_replicator_id">container_replicator_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="container_replicator_id">container_replicator_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -761,6 +785,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="event_streams.container_replicator_id references container_replicators.id"><a href='container_replicators.html'>container_replicators</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -800,7 +828,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="physical_server_id">physical_server_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="physical_server_id">physical_server_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -812,6 +840,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="event_streams.physical_server_id references physical_servers.id"><a href='physical_servers.html'>physical_servers</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -834,7 +866,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="user_id">user_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="user_id">user_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -846,6 +878,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="event_streams.user_id references users.id"><a href='users.html'>users</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -868,7 +904,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="tenant_id">tenant_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="tenant_id">tenant_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -880,6 +916,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="event_streams.tenant_id references tenants.id"><a href='tenants.html'>tenants</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -953,7 +993,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="physical_storage_id">physical_storage_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="physical_storage_id">physical_storage_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -965,6 +1005,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="event_streams.physical_storage_id references physical_storages.id"><a href='physical_storages.html'>physical_storages</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -1086,10 +1130,120 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="container_groups.html" target="_top" title="container_groups" alt="" coords="339,905,582,1228">
+<area shape="rect" id="node2" href="container_nodes.html" target="_top" title="container_nodes" alt="" coords="5,897,279,1103">
+<area shape="rect" id="node3" href="container_replicators.html" target="_top" title="container_replicators" alt="" coords="17,1163,267,1309">
+<area shape="rect" id="node4" href="containers.html" target="_top" title="containers" alt="" coords="655,993,890,1228">
+<area shape="rect" id="node5" href="event_streams.html" target="_top" title="event_streams" alt="" coords="947,5,1376,1600">
+<area shape="rect" id="node6" href="availability_zones.html" target="_top" title="availability_zones" alt="" coords="323,512,599,688">
+<area shape="rect" id="node7" href="ems_clusters.html" target="_top" title="ems_clusters" alt="" coords="339,260,583,465">
+<area shape="rect" id="node8" href="hosts.html" target="_top" title="hosts" alt="" coords="653,321,892,673">
+<area shape="rect" id="node9" href="physical_servers.html" target="_top" title="physical_servers" alt="" coords="343,705,579,852">
+<area shape="rect" id="node10" href="physical_storages.html" target="_top" title="physical_storages" alt="" coords="643,1756,903,1932">
+<area shape="rect" id="node11" href="tenants.html" target="_top" title="tenants" alt="" coords="648,1475,897,1739">
+<area shape="rect" id="node12" href="users.html" target="_top" title="users" alt="" coords="663,1281,883,1457">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/event_streams.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="accounts.html" target="_top" title="accounts" alt="" coords="1475,1099,1629,1187">
+<area shape="rect" id="node2" href="hosts.html" target="_top" title="hosts" alt="" coords="992,1191,1231,1543">
+<area shape="rect" id="node11" href="availability_zones.html" target="_top" title="availability_zones" alt="" coords="605,1396,881,1572">
+<area shape="rect" id="node28" href="ems_clusters.html" target="_top" title="ems_clusters" alt="" coords="621,1589,865,1795">
+<area shape="rect" id="node29" href="physical_servers.html" target="_top" title="physical_servers" alt="" coords="625,1812,861,1959">
+<area shape="rect" id="node3" href="authentications.html" target="_top" title="authentications" alt="" coords="1007,4416,1215,4504">
+<area shape="rect" id="node4" href="miq_groups.html" target="_top" title="miq_groups" alt="" coords="656,3991,829,4079">
+<area shape="rect" id="node5" href="tenants.html" target="_top" title="tenants" alt="" coords="292,4340,541,4604">
+<area shape="rect" id="node6" href="automate_workspaces.html" target="_top" title="automate_workspaces" alt="" coords="615,3744,870,3832">
+<area shape="rect" id="node7" href="users.html" target="_top" title="users" alt="" coords="307,3385,527,3561">
+<area shape="rect" id="node8" href="canisters.html" target="_top" title="canisters" alt="" coords="1034,464,1189,552">
+<area shape="rect" id="node9" href="physical_storages.html" target="_top" title="physical_storages" alt="" coords="613,283,873,459">
+<area shape="rect" id="node59" href="physical_racks.html" target="_top" title="physical_racks" alt="" coords="319,315,514,403">
+<area shape="rect" id="node60" href="physical_storage_families.html" target="_top" title="physical_storage_families" alt="" coords="277,420,556,508">
+<area shape="rect" id="node10" href="cloud_services.html" target="_top" title="cloud_services" alt="" coords="2115,712,2309,800">
+<area shape="rect" id="node12" href="system_services.html" target="_top" title="system_services" alt="" coords="1837,712,2044,800">
+<area shape="rect" id="node39" href="host_service_groups.html" target="_top" title="host_service_groups" alt="" coords="1434,783,1670,871">
+<area shape="rect" id="node13" href="cloud_subnets.html" target="_top" title="cloud_subnets" alt="" coords="1014,1668,1209,1756">
+<area shape="rect" id="node14" href="cloud_volume_backups.html" target="_top" title="cloud_volume_backups" alt="" coords="1811,409,2071,497">
+<area shape="rect" id="node15" href="cloud_volumes.html" target="_top" title="cloud_volumes" alt="" coords="1453,323,1651,411">
+<area shape="rect" id="node16" href="storage_resources.html" target="_top" title="storage_resources" alt="" coords="1001,181,1222,269">
+<area shape="rect" id="node17" href="container_env_vars.html" target="_top" title="container_env_vars" alt="" coords="1436,3556,1668,3644">
+<area shape="rect" id="node18" href="containers.html" target="_top" title="containers" alt="" coords="994,2436,1229,2671">
+<area shape="rect" id="node19" href="container_groups.html" target="_top" title="container_groups" alt="" coords="621,2520,864,2843">
+<area shape="rect" id="node26" href="container_images.html" target="_top" title="container_images" alt="" coords="633,2117,852,2205">
+<area shape="rect" id="node20" href="container_build_pods.html" target="_top" title="container_build_pods" alt="" coords="293,2867,541,2955">
+<area shape="rect" id="node21" href="container_nodes.html" target="_top" title="container_nodes" alt="" coords="280,2404,553,2609">
+<area shape="rect" id="node22" href="container_projects.html" target="_top" title="container_projects" alt="" coords="5,2683,233,2771">
+<area shape="rect" id="node23" href="container_replicators.html" target="_top" title="container_replicators" alt="" coords="292,2703,541,2849">
+<area shape="rect" id="node24" href="container_groups_container_services.html" target="_top" title="container_groups_container_services" alt="" coords="929,2688,1293,2776">
+<area shape="rect" id="node25" href="container_port_configs.html" target="_top" title="container_port_configs" alt="" coords="1423,3451,1681,3539">
+<area shape="rect" id="node27" href="event_streams.html" target="_top" title="event_streams" alt="" coords="1337,1839,1767,3433">
+<area shape="rect" id="node30" href="ext_management_systems.html" target="_top" title="ext_management_systems" alt="" coords="969,4787,1254,4875">
+<area shape="rect" id="node31" href="providers.html" target="_top" title="providers" alt="" coords="663,4664,822,4752">
+<area shape="rect" id="node32" href="external_urls.html" target="_top" title="external_urls" alt="" coords="649,2896,836,2984">
+<area shape="rect" id="node33" href="guest_applications.html" target="_top" title="guest_applications" alt="" coords="1439,1628,1665,1716">
+<area shape="rect" id="node34" href="hardwares.html" target="_top" title="hardwares" alt="" coords="1857,1167,2024,1255">
+<area shape="rect" id="node35" href="switches.html" target="_top" title="switches" alt="" coords="1476,1240,1628,1328">
+<area shape="rect" id="node36" href="host_aggregate_hosts.html" target="_top" title="host_aggregate_hosts" alt="" coords="1429,677,1675,765">
+<area shape="rect" id="node37" href="host_initiator_groups.html" target="_top" title="host_initiator_groups" alt="" coords="988,76,1235,164">
+<area shape="rect" id="node38" href="host_initiators.html" target="_top" title="host_initiators" alt="" coords="1454,39,1650,127">
+<area shape="rect" id="node40" href="host_storages.html" target="_top" title="host_storages" alt="" coords="1458,888,1646,976">
+<area shape="rect" id="node41" href="host_switches.html" target="_top" title="host_switches" alt="" coords="1845,1327,2036,1415">
+<area shape="rect" id="node42" href="miq_ae_namespaces.html" target="_top" title="miq_ae_namespaces" alt="" coords="623,4451,862,4539">
+<area shape="rect" id="node43" href="miq_alert_status_actions.html" target="_top" title="miq_alert_status_actions" alt="" coords="606,3320,879,3408">
+<area shape="rect" id="node44" href="miq_groups_users.html" target="_top" title="miq_groups_users" alt="" coords="1002,3736,1221,3824">
+<area shape="rect" id="node45" href="miq_product_features.html" target="_top" title="miq_product_features" alt="" coords="616,4769,869,4857">
+<area shape="rect" id="node46" href="miq_queue.html" target="_top" title="miq_queue" alt="" coords="657,3849,828,3937">
+<area shape="rect" id="node47" href="miq_reports.html" target="_top" title="miq_reports" alt="" coords="1022,3556,1201,3644">
+<area shape="rect" id="node48" href="miq_request_tasks.html" target="_top" title="miq_request_tasks" alt="" coords="1439,4557,1665,4645">
+<area shape="rect" id="node49" href="miq_requests.html" target="_top" title="miq_requests" alt="" coords="1017,4523,1205,4611">
+<area shape="rect" id="node50" href="service_orders.html" target="_top" title="service_orders" alt="" coords="645,4204,840,4292">
+<area shape="rect" id="node51" href="miq_widget_contents.html" target="_top" title="miq_widget_contents" alt="" coords="988,3037,1235,3125">
+<area shape="rect" id="node52" href="miq_widgets.html" target="_top" title="miq_widgets" alt="" coords="652,3001,833,3089">
+<area shape="rect" id="node53" href="notification_recipients.html" target="_top" title="notification_recipients" alt="" coords="982,3197,1241,3285">
+<area shape="rect" id="node54" href="notifications.html" target="_top" title="notifications" alt="" coords="651,3215,834,3303">
+<area shape="rect" id="node55" href="operating_systems.html" target="_top" title="operating_systems" alt="" coords="1439,993,1665,1081">
+<area shape="rect" id="node56" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="990,3991,1233,4079">
+<area shape="rect" id="node57" href="patches.html" target="_top" title="patches" alt="" coords="1479,1345,1625,1433">
+<area shape="rect" id="node58" href="physical_disks.html" target="_top" title="physical_disks" alt="" coords="1455,428,1649,516">
+<area shape="rect" id="node61" href="placement_groups.html" target="_top" title="placement_groups" alt="" coords="999,1809,1224,1897">
+<area shape="rect" id="node62" href="policy_events.html" target="_top" title="policy_events" alt="" coords="1457,1523,1647,1611">
+<area shape="rect" id="node63" href="service_template_catalogs.html" target="_top" title="service_template_catalogs" alt="" coords="600,4309,885,4397">
+<area shape="rect" id="node64" href="service_template_tenants.html" target="_top" title="service_template_tenants" alt="" coords="1411,4804,1693,4892">
+<area shape="rect" id="node65" href="service_templates.html" target="_top" title="service_templates" alt="" coords="999,4309,1223,4397">
+<area shape="rect" id="node66" href="services.html" target="_top" title="services" alt="" coords="1479,4131,1625,4219">
+<area shape="rect" id="node67" href="sessions.html" target="_top" title="sessions" alt="" coords="669,3461,816,3549">
+<area shape="rect" id="node68" href="shares.html" target="_top" title="shares" alt="" coords="675,3639,810,3727">
+<area shape="rect" id="node69" href="system_consoles.html" target="_top" title="system_consoles" alt="" coords="1835,2679,2046,2767">
+<area shape="rect" id="node70" href="vms.html" target="_top" title="vms" alt="" coords="1493,1733,1611,1821">
+<area shape="rect" id="node71" href="tenant_quotas.html" target="_top" title="tenant_quotas" alt="" coords="645,4875,841,4963">
+<area shape="rect" id="node72" href="wwpn_candidates.html" target="_top" title="wwpn_candidates" alt="" coords="1000,323,1223,411">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/event_streams.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

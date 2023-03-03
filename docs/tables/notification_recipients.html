@@ -120,7 +120,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="notification_id">notification_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="notification_id">notification_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -132,12 +132,16 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="notification_recipients.notification_id references notifications.id"><a href='notifications.html'>notifications</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="user_id">user_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="user_id">user_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -149,6 +153,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="notification_recipients.user_id references users.id"><a href='users.html'>users</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -216,10 +224,56 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="notification_recipients.html" target="_top" title="notification_recipients" alt="" coords="519,95,847,281">
+<area shape="rect" id="node2" href="notifications.html" target="_top" title="notifications" alt="" coords="269,5,475,299">
+<area shape="rect" id="node3" href="users.html" target="_top" title="users" alt="" coords="5,171,225,347">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/notification_recipients.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="automate_workspaces.html" target="_top" title="automate_workspaces" alt="" coords="281,316,536,404">
+<area shape="rect" id="node2" href="users.html" target="_top" title="users" alt="" coords="7,945,227,1121">
+<area shape="rect" id="node3" href="event_streams.html" target="_top" title="event_streams" alt="" coords="310,421,507,509">
+<area shape="rect" id="node4" href="external_urls.html" target="_top" title="external_urls" alt="" coords="315,527,502,615">
+<area shape="rect" id="node5" href="miq_alert_status_actions.html" target="_top" title="miq_alert_status_actions" alt="" coords="272,632,545,720">
+<area shape="rect" id="node6" href="miq_groups_users.html" target="_top" title="miq_groups_users" alt="" coords="299,737,518,825">
+<area shape="rect" id="node7" href="miq_queue.html" target="_top" title="miq_queue" alt="" coords="323,843,494,931">
+<area shape="rect" id="node8" href="miq_reports.html" target="_top" title="miq_reports" alt="" coords="319,948,498,1036">
+<area shape="rect" id="node9" href="miq_widget_contents.html" target="_top" title="miq_widget_contents" alt="" coords="630,1228,877,1316">
+<area shape="rect" id="node10" href="miq_widgets.html" target="_top" title="miq_widgets" alt="" coords="318,1089,499,1177">
+<area shape="rect" id="node11" href="notification_recipients.html" target="_top" title="notification_recipients" alt="" coords="589,813,917,1000">
+<area shape="rect" id="node12" href="notifications.html" target="_top" title="notifications" alt="" coords="306,5,511,299">
+<area shape="rect" id="node13" href="notification_types.html" target="_top" title="notification_types" alt="" coords="5,37,228,125">
+<area shape="rect" id="node14" href="service_orders.html" target="_top" title="service_orders" alt="" coords="311,1195,506,1283">
+<area shape="rect" id="node15" href="sessions.html" target="_top" title="sessions" alt="" coords="335,1300,482,1388">
+<area shape="rect" id="node16" href="shares.html" target="_top" title="shares" alt="" coords="341,1405,476,1493">
+<area shape="rect" id="node17" href="system_consoles.html" target="_top" title="system_consoles" alt="" coords="303,1511,514,1599">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/notification_recipients.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

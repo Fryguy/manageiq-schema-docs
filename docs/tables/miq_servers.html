@@ -111,6 +111,22 @@
                                     <td>nextval(&#39;miq_servers_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="assigned_server_roles.miq_server_id references miq_servers.id"><a href='assigned_server_roles.html'>assigned_server_roles</a><span class='relatedKey'>.miq_server_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="jobs.miq_server_id references miq_servers.id"><a href='jobs.html'>jobs</a><span class='relatedKey'>.miq_server_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="miq_tasks.miq_server_id references miq_servers.id"><a href='miq_tasks.html'>miq_tasks</a><span class='relatedKey'>.miq_server_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="miq_workers.miq_server_id references miq_servers.id"><a href='miq_workers.html'>miq_workers</a><span class='relatedKey'>.miq_server_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -375,7 +391,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="zone_id">zone_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="zone_id">zone_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -387,6 +403,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="miq_servers.zone_id references zones.id"><a href='zones.html'>zones</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -494,7 +514,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="vm_id">vm_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="vm_id">vm_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -506,6 +526,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="miq_servers.vm_id references vms.id"><a href='vms.html'>vms</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -783,10 +807,79 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="assigned_server_roles.html" target="_top" title="assigned_server_roles" alt="" coords="800,33,1048,209">
+<area shape="rect" id="node2" href="miq_servers.html" target="_top" title="miq_servers" alt="" coords="325,236,756,1391">
+<area shape="rect" id="node5" href="vms.html" target="_top" title="vms" alt="" coords="5,913,281,1676">
+<area shape="rect" id="node6" href="zones.html" target="_top" title="zones" alt="" coords="54,708,233,825">
+<area shape="rect" id="node3" href="jobs.html" target="_top" title="jobs" alt="" coords="1092,5,1265,357">
+<area shape="rect" id="node4" href="miq_tasks.html" target="_top" title="miq_tasks" alt="" coords="843,263,1005,409">
+<area shape="rect" id="node7" href="miq_workers.html" target="_top" title="miq_workers" alt="" coords="815,427,1033,691">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/miq_servers.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="assigned_server_roles.html" target="_top" title="assigned_server_roles" alt="" coords="2112,184,2360,360">
+<area shape="rect" id="node2" href="miq_servers.html" target="_top" title="miq_servers" alt="" coords="1637,289,2068,1444">
+<area shape="rect" id="node3" href="server_roles.html" target="_top" title="server_roles" alt="" coords="1764,184,1941,272">
+<area shape="rect" id="node11" href="vms.html" target="_top" title="vms" alt="" coords="1317,1600,1593,2363">
+<area shape="rect" id="node15" href="zones.html" target="_top" title="zones" alt="" coords="202,561,381,679">
+<area shape="rect" id="node4" href="cloud_networks.html" target="_top" title="cloud_networks" alt="" coords="759,1927,964,2015">
+<area shape="rect" id="node5" href="cloud_tenants.html" target="_top" title="cloud_tenants" alt="" coords="195,2119,388,2207">
+<area shape="rect" id="node6" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="432,1528,675,1616">
+<area shape="rect" id="node7" href="resource_groups.html" target="_top" title="resource_groups" alt="" coords="449,2269,658,2357">
+<area shape="rect" id="node14" href="tenants.html" target="_top" title="tenants" alt="" coords="5,741,151,829">
+<area shape="rect" id="node24" href="miq_groups.html" target="_top" title="miq_groups" alt="" coords="205,1419,378,1507">
+<area shape="rect" id="node8" href="cloud_subnets.html" target="_top" title="cloud_subnets" alt="" coords="1063,2060,1258,2148">
+<area shape="rect" id="node9" href="availability_zones.html" target="_top" title="availability_zones" alt="" coords="751,2032,972,2120">
+<area shape="rect" id="node10" href="cloud_tenants_vms.html" target="_top" title="cloud_tenants_vms" alt="" coords="1737,2165,1968,2253">
+<area shape="rect" id="node17" href="hosts.html" target="_top" title="hosts" alt="" coords="1097,1600,1224,1688">
+<area shape="rect" id="node18" href="ems_clusters.html" target="_top" title="ems_clusters" alt="" coords="770,1695,953,1783">
+<area shape="rect" id="node30" href="placement_groups.html" target="_top" title="placement_groups" alt="" coords="1048,2201,1273,2289">
+<area shape="rect" id="node34" href="flavors.html" target="_top" title="flavors" alt="" coords="1092,1847,1229,1935">
+<area shape="rect" id="node35" href="storages.html" target="_top" title="storages" alt="" coords="1086,1705,1235,1793">
+<area shape="rect" id="node36" href="storage_profiles.html" target="_top" title="storage_profiles" alt="" coords="1058,2379,1263,2467">
+<area shape="rect" id="node12" href="ext_management_systems.html" target="_top" title="ext_management_systems" alt="" coords="719,460,1004,548">
+<area shape="rect" id="node13" href="providers.html" target="_top" title="providers" alt="" coords="474,460,633,548">
+<area shape="rect" id="node16" href="floating_ips.html" target="_top" title="floating_ips" alt="" coords="1767,1497,1939,1585">
+<area shape="rect" id="node19" href="jobs.html" target="_top" title="jobs" alt="" coords="2432,216,2605,568">
+<area shape="rect" id="node20" href="miq_tasks.html" target="_top" title="miq_tasks" alt="" coords="2155,413,2317,560">
+<area shape="rect" id="node21" href="key_pairs_vms.html" target="_top" title="key_pairs_vms" alt="" coords="1755,1708,1950,1796">
+<area shape="rect" id="node22" href="load_balancer_pool_members.html" target="_top" title="load_balancer_pool_members" alt="" coords="1698,2429,2007,2517">
+<area shape="rect" id="node23" href="log_files.html" target="_top" title="log_files" alt="" coords="2446,585,2591,673">
+<area shape="rect" id="node25" href="miq_queue.html" target="_top" title="miq_queue" alt="" coords="2433,111,2604,199">
+<area shape="rect" id="node26" href="miq_report_results.html" target="_top" title="miq_report_results" alt="" coords="2404,1057,2633,1145">
+<area shape="rect" id="node27" href="miq_schedules.html" target="_top" title="miq_schedules" alt="" coords="1357,204,1554,292">
+<area shape="rect" id="node28" href="miq_widgets.html" target="_top" title="miq_widgets" alt="" coords="2428,5,2609,93">
+<area shape="rect" id="node29" href="miq_workers.html" target="_top" title="miq_workers" alt="" coords="2127,577,2345,841">
+<area shape="rect" id="node31" href="security_groups_vms.html" target="_top" title="security_groups_vms" alt="" coords="1731,1813,1974,1901">
+<area shape="rect" id="node32" href="service_templates.html" target="_top" title="service_templates" alt="" coords="441,673,665,761">
+<area shape="rect" id="node33" href="system_consoles.html" target="_top" title="system_consoles" alt="" coords="1747,1603,1958,1691">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/miq_servers.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

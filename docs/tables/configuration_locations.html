@@ -111,6 +111,14 @@
                                     <td>nextval(&#39;configuration_locations_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="configuration_locations_configuration_profiles.configuration_location_id references configuration_locations.id"><a href='configuration_locations_configuration_profiles.html'>configuration_locations_configuration_profiles</a><span class='relatedKey'>.configuration_location_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="configured_systems.configuration_location_id references configuration_locations.id"><a href='configured_systems.html'>configured_systems</a><span class='relatedKey'>.configuration_location_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -318,10 +326,48 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="configuration_locations_configuration_profiles.html" target="_top" title="configuration_locations_configuration_profiles" alt="" coords="463,5,897,157">
+<area shape="rect" id="node2" href="configuration_locations.html" target="_top" title="configuration_locations" alt="" coords="5,191,419,553">
+<area shape="rect" id="node3" href="configured_systems.html" target="_top" title="configured_systems" alt="" coords="499,175,861,615">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/configuration_locations.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="configuration_locations_configuration_profiles.html" target="_top" title="configuration_locations_configuration_profiles" alt="" coords="784,15,1219,167">
+<area shape="rect" id="node2" href="configuration_locations.html" target="_top" title="configuration_locations" alt="" coords="327,111,740,473">
+<area shape="rect" id="node3" href="configuration_profiles.html" target="_top" title="configuration_profiles" alt="" coords="408,5,659,93">
+<area shape="rect" id="node4" href="operating_system_flavors.html" target="_top" title="operating_system_flavors" alt="" coords="5,283,283,371">
+<area shape="rect" id="node5" href="configuration_tags_configured_systems.html" target="_top" title="configuration_tags_configured_systems" alt="" coords="1289,233,1667,321">
+<area shape="rect" id="node6" href="configured_systems.html" target="_top" title="configured_systems" alt="" coords="820,283,1183,723">
+<area shape="rect" id="node7" href="configuration_organizations.html" target="_top" title="configuration_organizations" alt="" coords="385,491,681,579">
+<area shape="rect" id="node8" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="412,632,655,720">
+<area shape="rect" id="node9" href="direct_configuration_tags_configured_systems.html" target="_top" title="direct_configuration_tags_configured_systems" alt="" coords="1263,339,1693,427">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/configuration_locations.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

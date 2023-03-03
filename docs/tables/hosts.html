@@ -111,6 +111,66 @@
                                     <td>nextval(&#39;hosts_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="accounts.host_id references hosts.id"><a href='accounts.html'>accounts</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="cloud_services.host_id references hosts.id"><a href='cloud_services.html'>cloud_services</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="event_streams.host_id references hosts.id"><a href='event_streams.html'>event_streams</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="guest_applications.host_id references hosts.id"><a href='guest_applications.html'>guest_applications</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="hardwares.host_id references hosts.id"><a href='hardwares.html'>hardwares</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="host_aggregate_hosts.host_id references hosts.id"><a href='host_aggregate_hosts.html'>host_aggregate_hosts</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="host_service_groups.host_id references hosts.id"><a href='host_service_groups.html'>host_service_groups</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="host_storages.host_id references hosts.id"><a href='host_storages.html'>host_storages</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="host_switches.host_id references hosts.id"><a href='host_switches.html'>host_switches</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="operating_systems.host_id references hosts.id"><a href='operating_systems.html'>operating_systems</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="patches.host_id references hosts.id"><a href='patches.html'>patches</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="policy_events.host_id references hosts.id"><a href='policy_events.html'>policy_events</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="switches.host_id references hosts.id"><a href='switches.html'>switches</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="system_services.host_id references hosts.id"><a href='system_services.html'>system_services</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="vms.host_id references hosts.id"><a href='vms.html'>vms</a><span class='relatedKey'>.host_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -596,7 +656,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="ems_cluster_id">ems_cluster_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="ems_cluster_id">ems_cluster_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -608,6 +668,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="hosts.ems_cluster_id references ems_clusters.id"><a href='ems_clusters.html'>ems_clusters</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -647,7 +711,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="availability_zone_id">availability_zone_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="availability_zone_id">availability_zone_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -659,6 +723,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="hosts.availability_zone_id references availability_zones.id"><a href='availability_zones.html'>availability_zones</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -698,7 +766,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="physical_server_id">physical_server_id</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="physical_server_id">physical_server_id</span></td>
                                     <td>int8</td>
                                     <td>19</td>
                                     <td title='nullable'>√</td>
@@ -710,6 +778,10 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="hosts.physical_server_id references physical_servers.id"><a href='physical_servers.html'>physical_servers</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -801,10 +873,118 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="accounts.html" target="_top" title="accounts" alt="" coords="832,2184,1031,2390">
+<area shape="rect" id="node2" href="hosts.html" target="_top" title="hosts" alt="" coords="325,1632,731,2787">
+<area shape="rect" id="node4" href="availability_zones.html" target="_top" title="availability_zones" alt="" coords="5,2434,281,2610">
+<area shape="rect" id="node7" href="ems_clusters.html" target="_top" title="ems_clusters" alt="" coords="21,2731,265,2936">
+<area shape="rect" id="node8" href="physical_servers.html" target="_top" title="physical_servers" alt="" coords="25,3228,261,3375">
+<area shape="rect" id="node3" href="cloud_services.html" target="_top" title="cloud_services" alt="" coords="1409,754,1679,988">
+<area shape="rect" id="node5" href="system_services.html" target="_top" title="system_services" alt="" coords="1138,1012,1359,1247">
+<area shape="rect" id="node13" href="host_service_groups.html" target="_top" title="host_service_groups" alt="" coords="813,1176,1049,1352">
+<area shape="rect" id="node6" href="event_streams.html" target="_top" title="event_streams" alt="" coords="800,3006,1063,3710">
+<area shape="rect" id="node9" href="guest_applications.html" target="_top" title="guest_applications" alt="" coords="818,888,1045,1123">
+<area shape="rect" id="node10" href="hardwares.html" target="_top" title="hardwares" alt="" coords="1132,1280,1365,1544">
+<area shape="rect" id="node11" href="switches.html" target="_top" title="switches" alt="" coords="831,1406,1032,1582">
+<area shape="rect" id="node12" href="host_aggregate_hosts.html" target="_top" title="host_aggregate_hosts" alt="" coords="809,1599,1054,1751">
+<area shape="rect" id="node14" href="host_storages.html" target="_top" title="host_storages" alt="" coords="837,2443,1025,2619">
+<area shape="rect" id="node15" href="host_switches.html" target="_top" title="host_switches" alt="" coords="1153,1946,1344,2098">
+<area shape="rect" id="node16" href="operating_systems.html" target="_top" title="operating_systems" alt="" coords="818,1768,1045,1974">
+<area shape="rect" id="node17" href="patches.html" target="_top" title="patches" alt="" coords="832,1991,1031,2167">
+<area shape="rect" id="node18" href="policy_events.html" target="_top" title="policy_events" alt="" coords="775,2636,1088,2988">
+<area shape="rect" id="node19" href="vms.html" target="_top" title="vms" alt="" coords="793,72,1069,835">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/hosts.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="accounts.html" target="_top" title="accounts" alt="" coords="1552,1733,1751,1939">
+<area shape="rect" id="node2" href="hosts.html" target="_top" title="hosts" alt="" coords="1045,1923,1451,3077">
+<area shape="rect" id="node10" href="availability_zones.html" target="_top" title="availability_zones" alt="" coords="725,1131,1001,1307">
+<area shape="rect" id="node29" href="ems_clusters.html" target="_top" title="ems_clusters" alt="" coords="741,2877,985,3083">
+<area shape="rect" id="node30" href="physical_servers.html" target="_top" title="physical_servers" alt="" coords="745,3536,981,3683">
+<area shape="rect" id="node3" href="canisters.html" target="_top" title="canisters" alt="" coords="1574,3759,1729,3847">
+<area shape="rect" id="node4" href="physical_storages.html" target="_top" title="physical_storages" alt="" coords="1139,3736,1357,3824">
+<area shape="rect" id="node54" href="physical_racks.html" target="_top" title="physical_racks" alt="" coords="459,3736,654,3824">
+<area shape="rect" id="node5" href="cloud_networks.html" target="_top" title="cloud_networks" alt="" coords="761,516,966,604">
+<area shape="rect" id="node6" href="cloud_tenants.html" target="_top" title="cloud_tenants" alt="" coords="195,584,388,672">
+<area shape="rect" id="node7" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="435,725,678,813">
+<area shape="rect" id="node8" href="resource_groups.html" target="_top" title="resource_groups" alt="" coords="452,443,661,531">
+<area shape="rect" id="node31" href="tenants.html" target="_top" title="tenants" alt="" coords="5,865,151,953">
+<area shape="rect" id="node47" href="miq_groups.html" target="_top" title="miq_groups" alt="" coords="205,829,378,917">
+<area shape="rect" id="node9" href="cloud_services.html" target="_top" title="cloud_services" alt="" coords="2205,1376,2475,1611">
+<area shape="rect" id="node11" href="system_services.html" target="_top" title="system_services" alt="" coords="1896,1652,2117,1887">
+<area shape="rect" id="node34" href="host_service_groups.html" target="_top" title="host_service_groups" alt="" coords="1533,1956,1769,2132">
+<area shape="rect" id="node12" href="cloud_subnets.html" target="_top" title="cloud_subnets" alt="" coords="1151,516,1345,604">
+<area shape="rect" id="node13" href="cloud_tenants_vms.html" target="_top" title="cloud_tenants_vms" alt="" coords="1891,5,2122,93">
+<area shape="rect" id="node14" href="vms.html" target="_top" title="vms" alt="" coords="1513,305,1789,1068">
+<area shape="rect" id="node24" href="storages.html" target="_top" title="storages" alt="" coords="1173,1295,1323,1383">
+<area shape="rect" id="node25" href="storage_profiles.html" target="_top" title="storage_profiles" alt="" coords="1145,1153,1351,1241">
+<area shape="rect" id="node55" href="placement_groups.html" target="_top" title="placement_groups" alt="" coords="1135,871,1361,959">
+<area shape="rect" id="node62" href="flavors.html" target="_top" title="flavors" alt="" coords="1179,657,1317,745">
+<area shape="rect" id="node15" href="cloud_volume_backups.html" target="_top" title="cloud_volume_backups" alt="" coords="1521,1085,1781,1173">
+<area shape="rect" id="node16" href="cloud_volumes.html" target="_top" title="cloud_volumes" alt="" coords="1149,976,1347,1064">
+<area shape="rect" id="node17" href="container_groups.html" target="_top" title="container_groups" alt="" coords="755,3389,972,3477">
+<area shape="rect" id="node18" href="container_nodes.html" target="_top" title="container_nodes" alt="" coords="451,3316,662,3404">
+<area shape="rect" id="node19" href="container_replicators.html" target="_top" title="container_replicators" alt="" coords="432,3428,681,3516">
+<area shape="rect" id="node20" href="containers.html" target="_top" title="containers" alt="" coords="1165,3380,1331,3468">
+<area shape="rect" id="node21" href="container_images.html" target="_top" title="container_images" alt="" coords="754,3152,973,3240">
+<area shape="rect" id="node22" href="disks.html" target="_top" title="disks" alt="" coords="2278,1231,2402,1319">
+<area shape="rect" id="node23" href="hardwares.html" target="_top" title="hardwares" alt="" coords="1890,2819,2123,3083">
+<area shape="rect" id="node39" href="switches.html" target="_top" title="switches" alt="" coords="1551,2415,1752,2591">
+<area shape="rect" id="node40" href="computer_systems.html" target="_top" title="computer_systems" alt="" coords="1537,2932,1765,3020">
+<area shape="rect" id="node26" href="event_logs.html" target="_top" title="event_logs" alt="" coords="2257,2665,2423,2753">
+<area shape="rect" id="node27" href="operating_systems.html" target="_top" title="operating_systems" alt="" coords="1893,2596,2120,2801">
+<area shape="rect" id="node28" href="event_streams.html" target="_top" title="event_streams" alt="" coords="1520,3037,1783,3741">
+<area shape="rect" id="node32" href="users.html" target="_top" title="users" alt="" coords="1185,3167,1311,3255">
+<area shape="rect" id="node33" href="filesystems.html" target="_top" title="filesystems" alt="" coords="1921,1959,2092,2047">
+<area shape="rect" id="node35" href="floating_ips.html" target="_top" title="floating_ips" alt="" coords="1921,111,2093,199">
+<area shape="rect" id="node36" href="guest_applications.html" target="_top" title="guest_applications" alt="" coords="1538,2680,1765,2915">
+<area shape="rect" id="node37" href="guest_devices.html" target="_top" title="guest_devices" alt="" coords="2245,2455,2435,2543">
+<area shape="rect" id="node38" href="lans.html" target="_top" title="lans" alt="" coords="1948,2491,2065,2579">
+<area shape="rect" id="node41" href="host_aggregate_hosts.html" target="_top" title="host_aggregate_hosts" alt="" coords="1529,1492,1774,1644">
+<area shape="rect" id="node42" href="host_aggregates.html" target="_top" title="host_aggregates" alt="" coords="1145,1553,1351,1641">
+<area shape="rect" id="node43" href="host_storages.html" target="_top" title="host_storages" alt="" coords="1557,1263,1745,1439">
+<area shape="rect" id="node44" href="host_switches.html" target="_top" title="host_switches" alt="" coords="1911,2249,2102,2401">
+<area shape="rect" id="node45" href="key_pairs_vms.html" target="_top" title="key_pairs_vms" alt="" coords="1909,532,2104,620">
+<area shape="rect" id="node46" href="load_balancer_pool_members.html" target="_top" title="load_balancer_pool_members" alt="" coords="1852,216,2161,304">
+<area shape="rect" id="node48" href="miq_servers.html" target="_top" title="miq_servers" alt="" coords="1918,321,2095,409">
+<area shape="rect" id="node49" href="networks.html" target="_top" title="networks" alt="" coords="2261,2912,2419,3000">
+<area shape="rect" id="node50" href="os_processes.html" target="_top" title="os_processes" alt="" coords="2249,2560,2431,2648">
+<area shape="rect" id="node51" href="partitions.html" target="_top" title="partitions" alt="" coords="2570,1755,2733,1843">
+<area shape="rect" id="node52" href="patches.html" target="_top" title="patches" alt="" coords="1552,2149,1751,2325">
+<area shape="rect" id="node53" href="physical_network_ports.html" target="_top" title="physical_network_ports" alt="" coords="2519,2419,2784,2507">
+<area shape="rect" id="node56" href="policy_event_contents.html" target="_top" title="policy_event_contents" alt="" coords="1879,3867,2134,3955">
+<area shape="rect" id="node57" href="policy_events.html" target="_top" title="policy_events" alt="" coords="1495,3864,1808,4216">
+<area shape="rect" id="node58" href="miq_event_definitions.html" target="_top" title="miq_event_definitions" alt="" coords="1121,3869,1375,3957">
+<area shape="rect" id="node59" href="miq_policies.html" target="_top" title="miq_policies" alt="" coords="1158,3975,1338,4063">
+<area shape="rect" id="node60" href="security_groups_vms.html" target="_top" title="security_groups_vms" alt="" coords="1885,427,2128,515">
+<area shape="rect" id="node61" href="system_consoles.html" target="_top" title="system_consoles" alt="" coords="1901,1547,2112,1635">
+<area shape="rect" id="node63" href="volumes.html" target="_top" title="volumes" alt="" coords="2265,2771,2415,2859">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/hosts.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

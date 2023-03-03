@@ -111,6 +111,10 @@
                                     <td>nextval(&#39;physical_storage_families_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="physical_storages.physical_storage_family_id references physical_storage_families.id"><a href='physical_storages.html'>physical_storages</a><span class='relatedKey'>.physical_storage_family_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -278,10 +282,48 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="physical_storages.html" target="_top" title="physical_storages" alt="" coords="467,5,727,181">
+<area shape="rect" id="node2" href="physical_storage_families.html" target="_top" title="physical_storage_families" alt="" coords="5,61,423,365">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/physical_storage_families.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="canisters.html" target="_top" title="canisters" alt="" coords="817,252,971,340">
+<area shape="rect" id="node2" href="physical_storages.html" target="_top" title="physical_storages" alt="" coords="467,249,727,425">
+<area shape="rect" id="node7" href="physical_racks.html" target="_top" title="physical_racks" alt="" coords="117,240,311,328">
+<area shape="rect" id="node8" href="physical_storage_families.html" target="_top" title="physical_storage_families" alt="" coords="5,345,423,649">
+<area shape="rect" id="node3" href="event_streams.html" target="_top" title="event_streams" alt="" coords="795,5,993,93">
+<area shape="rect" id="node4" href="host_initiator_groups.html" target="_top" title="host_initiator_groups" alt="" coords="771,147,1017,235">
+<area shape="rect" id="node5" href="host_initiators.html" target="_top" title="host_initiators" alt="" coords="1061,131,1257,219">
+<area shape="rect" id="node6" href="physical_disks.html" target="_top" title="physical_disks" alt="" coords="1063,269,1256,357">
+<area shape="rect" id="node9" href="storage_resources.html" target="_top" title="storage_resources" alt="" coords="783,393,1005,481">
+<area shape="rect" id="node10" href="wwpn_candidates.html" target="_top" title="wwpn_candidates" alt="" coords="783,499,1005,587">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/physical_storage_families.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

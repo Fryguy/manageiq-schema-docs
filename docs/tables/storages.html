@@ -111,6 +111,38 @@
                                     <td>nextval(&#39;storages_id_seq&#39;::regclass)</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="disks.storage_id references storages.id"><a href='disks.html'>disks</a><span class='relatedKey'>.storage_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="host_storages.storage_id references storages.id"><a href='host_storages.html'>host_storages</a><span class='relatedKey'>.storage_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="iso_images.storage_id references storages.id"><a href='iso_images.html'>iso_images</a><span class='relatedKey'>.storage_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="repositories.storage_id references storages.id"><a href='repositories.html'>repositories</a><span class='relatedKey'>.storage_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="storage_files.storage_id references storages.id"><a href='storage_files.html'>storage_files</a><span class='relatedKey'>.storage_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="storage_profile_storages.storage_id references storages.id"><a href='storage_profile_storages.html'>storage_profile_storages</a><span class='relatedKey'>.storage_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="storages_vms_and_templates.storage_id references storages.id"><a href='storages_vms_and_templates.html'>storages_vms_and_templates</a><span class='relatedKey'>.storage_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="vms.storage_id references storages.id"><a href='vms.html'>vms</a><span class='relatedKey'>.storage_id</span></td>
+                                                <td class="constraint detail">ByRailsConventionConstraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -562,10 +594,77 @@
                             </table>
                         </div><!-- /.box-body -->
                     </div>
-                    <div class="alert alert-warning alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-warning"></i>Diagram producer might be missing</h4>
-                        <p>No diagrams were produced please see application output for any errors</p>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="disks.html" target="_top" title="disks" alt="" coords="569,5,758,269">
+<area shape="rect" id="node2" href="storages.html" target="_top" title="storages" alt="" coords="5,783,467,1556">
+<area shape="rect" id="node3" href="host_storages.html" target="_top" title="host_storages" alt="" coords="569,287,757,463">
+<area shape="rect" id="node4" href="iso_images.html" target="_top" title="iso_images" alt="" coords="565,480,761,656">
+<area shape="rect" id="node5" href="repositories.html" target="_top" title="repositories" alt="" coords="575,673,752,820">
+<area shape="rect" id="node6" href="storage_files.html" target="_top" title="storage_files" alt="" coords="564,837,763,1013">
+<area shape="rect" id="node7" href="storage_profile_storages.html" target="_top" title="storage_profile_storages" alt="" coords="530,1031,797,1183">
+<area shape="rect" id="node8" href="storages_vms_and_templates.html" target="_top" title="storages_vms_and_templates" alt="" coords="511,1200,816,1352">
+<area shape="rect" id="node9" href="vms.html" target="_top" title="vms" alt="" coords="525,1369,801,2132">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/storages.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="cloud_networks.html" target="_top" title="cloud_networks" alt="" coords="727,397,932,485">
+<area shape="rect" id="node2" href="cloud_tenants.html" target="_top" title="cloud_tenants" alt="" coords="195,395,388,483">
+<area shape="rect" id="node3" href="orchestration_stacks.html" target="_top" title="orchestration_stacks" alt="" coords="432,716,675,804">
+<area shape="rect" id="node4" href="resource_groups.html" target="_top" title="resource_groups" alt="" coords="449,397,658,485">
+<area shape="rect" id="node21" href="miq_groups.html" target="_top" title="miq_groups" alt="" coords="205,787,378,875">
+<area shape="rect" id="node22" href="tenants.html" target="_top" title="tenants" alt="" coords="5,787,151,875">
+<area shape="rect" id="node5" href="cloud_subnets.html" target="_top" title="cloud_subnets" alt="" coords="1117,361,1312,449">
+<area shape="rect" id="node6" href="availability_zones.html" target="_top" title="availability_zones" alt="" coords="719,680,940,768">
+<area shape="rect" id="node7" href="cloud_tenants_vms.html" target="_top" title="cloud_tenants_vms" alt="" coords="1878,5,2109,93">
+<area shape="rect" id="node8" href="vms.html" target="_top" title="vms" alt="" coords="1504,289,1780,1052">
+<area shape="rect" id="node11" href="storages.html" target="_top" title="storages" alt="" coords="984,1531,1445,2304">
+<area shape="rect" id="node12" href="storage_profiles.html" target="_top" title="storage_profiles" alt="" coords="1112,1331,1317,1419">
+<area shape="rect" id="node14" href="hosts.html" target="_top" title="hosts" alt="" coords="1151,752,1278,840">
+<area shape="rect" id="node16" href="ems_clusters.html" target="_top" title="ems_clusters" alt="" coords="738,539,921,627">
+<area shape="rect" id="node25" href="placement_groups.html" target="_top" title="placement_groups" alt="" coords="1102,929,1327,1017">
+<area shape="rect" id="node32" href="flavors.html" target="_top" title="flavors" alt="" coords="1146,539,1283,627">
+<area shape="rect" id="node9" href="disks.html" target="_top" title="disks" alt="" coords="1899,1172,2088,1436">
+<area shape="rect" id="node10" href="hardwares.html" target="_top" title="hardwares" alt="" coords="1559,1069,1725,1157">
+<area shape="rect" id="node13" href="floating_ips.html" target="_top" title="floating_ips" alt="" coords="1907,216,2079,304">
+<area shape="rect" id="node15" href="host_storages.html" target="_top" title="host_storages" alt="" coords="1548,1175,1736,1351">
+<area shape="rect" id="node17" href="iso_images.html" target="_top" title="iso_images" alt="" coords="1544,2213,1740,2389">
+<area shape="rect" id="node18" href="pxe_image_types.html" target="_top" title="pxe_image_types" alt="" coords="1107,2321,1322,2409">
+<area shape="rect" id="node19" href="key_pairs_vms.html" target="_top" title="key_pairs_vms" alt="" coords="1896,637,2091,725">
+<area shape="rect" id="node20" href="load_balancer_pool_members.html" target="_top" title="load_balancer_pool_members" alt="" coords="1839,111,2148,199">
+<area shape="rect" id="node23" href="miq_servers.html" target="_top" title="miq_servers" alt="" coords="1905,321,2082,409">
+<area shape="rect" id="node24" href="partitions.html" target="_top" title="partitions" alt="" coords="2192,1128,2355,1216">
+<area shape="rect" id="node26" href="repositories.html" target="_top" title="repositories" alt="" coords="1553,1972,1731,2119">
+<area shape="rect" id="node27" href="security_groups_vms.html" target="_top" title="security_groups_vms" alt="" coords="1872,427,2115,515">
+<area shape="rect" id="node28" href="storage_files.html" target="_top" title="storage_files" alt="" coords="1543,1609,1741,1785">
+<area shape="rect" id="node29" href="storage_profile_storages.html" target="_top" title="storage_profile_storages" alt="" coords="1509,1404,1775,1556">
+<area shape="rect" id="node30" href="storages_vms_and_templates.html" target="_top" title="storages_vms_and_templates" alt="" coords="1489,1803,1795,1955">
+<area shape="rect" id="node31" href="system_consoles.html" target="_top" title="system_consoles" alt="" coords="1888,532,2099,620">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/storages.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
                     </div>
                 </section>
                 <script>

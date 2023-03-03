@@ -62,7 +62,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">5 &gt;</TD></TR>
     </TABLE>>
-    URL="authentications.html"
+    URL="../../tables/authentications.html"
     target="_top"
     tooltip="authentications"
   ];
@@ -73,7 +73,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
-    URL="entitlements.html"
+    URL="../../tables/entitlements.html"
     target="_top"
     tooltip="entitlements"
   ];
@@ -84,7 +84,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
-    URL="jobs.html"
+    URL="../../tables/jobs.html"
     target="_top"
     tooltip="jobs"
   ];
@@ -95,7 +95,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
-    URL="log_files.html"
+    URL="../../tables/log_files.html"
     target="_top"
     tooltip="log_files"
   ];
@@ -108,7 +108,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">10 &gt;</TD></TR>
     </TABLE>>
-    URL="miq_groups.html"
+    URL="../../tables/miq_groups.html"
     target="_top"
     tooltip="miq_groups"
   ];
@@ -119,7 +119,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
-    URL="miq_groups_users.html"
+    URL="../../tables/miq_groups_users.html"
     target="_top"
     tooltip="miq_groups_users"
   ];
@@ -130,7 +130,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 3</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
-    URL="miq_queue.html"
+    URL="../../tables/miq_queue.html"
     target="_top"
     tooltip="miq_queue"
   ];
@@ -144,7 +144,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
-    URL="miq_report_result_details.html"
+    URL="../../tables/miq_report_result_details.html"
     target="_top"
     tooltip="miq_report_result_details"
   ];
@@ -168,7 +168,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="miq_group_id" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="164" HEIGHT="16">miq_group_id</TD></TR></TABLE></TD><TD PORT="miq_group_id.type" ALIGN="LEFT">int8[19]</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 3</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">2 &gt;</TD></TR>
     </TABLE>>
-    URL="miq_report_results.html"
+    URL="../../tables/miq_report_results.html"
     target="_top"
     tooltip="miq_report_results"
   ];
@@ -186,7 +186,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 3</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 &gt;</TD></TR>
     </TABLE>>
-    URL="miq_reports.html"
+    URL="../../tables/miq_reports.html"
     target="_top"
     tooltip="miq_reports"
   ];
@@ -197,7 +197,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">4 &gt;</TD></TR>
     </TABLE>>
-    URL="miq_servers.html"
+    URL="../../tables/miq_servers.html"
     target="_top"
     tooltip="miq_servers"
   ];
@@ -210,7 +210,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">5 &gt;</TD></TR>
     </TABLE>>
-    URL="miq_tasks.html"
+    URL="../../tables/miq_tasks.html"
     target="_top"
     tooltip="miq_tasks"
   ];
@@ -226,7 +226,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
-    URL="miq_widget_contents.html"
+    URL="../../tables/miq_widget_contents.html"
     target="_top"
     tooltip="miq_widget_contents"
   ];
@@ -237,7 +237,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 3</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">2 &gt;</TD></TR>
     </TABLE>>
-    URL="miq_widgets.html"
+    URL="../../tables/miq_widgets.html"
     target="_top"
     tooltip="miq_widgets"
   ];
@@ -248,7 +248,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">6 &gt;</TD></TR>
     </TABLE>>
-    URL="orchestration_stacks.html"
+    URL="../../tables/orchestration_stacks.html"
     target="_top"
     tooltip="orchestration_stacks"
   ];
@@ -259,7 +259,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">4 &gt;</TD></TR>
     </TABLE>>
-    URL="service_templates.html"
+    URL="../../tables/service_templates.html"
     target="_top"
     tooltip="service_templates"
   ];
@@ -270,7 +270,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 &gt;</TD></TR>
     </TABLE>>
-    URL="services.html"
+    URL="../../tables/services.html"
     target="_top"
     tooltip="services"
   ];
@@ -281,7 +281,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">20 &gt;</TD></TR>
     </TABLE>>
-    URL="tenants.html"
+    URL="../../tables/tenants.html"
     target="_top"
     tooltip="tenants"
   ];
@@ -292,7 +292,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">40 &gt;</TD></TR>
     </TABLE>>
-    URL="time_profiles.html"
+    URL="../../tables/time_profiles.html"
     target="_top"
     tooltip="time_profiles"
   ];
@@ -303,7 +303,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">15 &gt;</TD></TR>
     </TABLE>>
-    URL="users.html"
+    URL="../../tables/users.html"
     target="_top"
     tooltip="users"
   ];
@@ -314,7 +314,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 14</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">7 &gt;</TD></TR>
     </TABLE>>
-    URL="vms.html"
+    URL="../../tables/vms.html"
     target="_top"
     tooltip="vms"
   ];

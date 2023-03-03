@@ -31,7 +31,7 @@ digraph "container_conditions" {
       <TR><TD PORT="container_entity_type" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="130" HEIGHT="16">container_entity_type</TD></TR></TABLE></TD><TD PORT="container_entity_type.type" ALIGN="LEFT">varchar[2147483647]</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
-    URL="tables/container_conditions.html"
+    URL="../../tables/container_conditions.html"
     target="_top"
     tooltip="container_conditions"
   ];

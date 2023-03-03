@@ -26,7 +26,7 @@ digraph "miq_worker_types" {
       <TR><TD PORT="kill_priority" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="108" HEIGHT="16">kill_priority</TD></TR></TABLE></TD><TD PORT="kill_priority.type" ALIGN="LEFT">int4[10]</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
-    URL="tables/miq_worker_types.html"
+    URL="../../tables/miq_worker_types.html"
     target="_top"
     tooltip="miq_worker_types"
   ];

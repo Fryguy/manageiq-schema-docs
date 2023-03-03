@@ -27,7 +27,7 @@ digraph "orchestration_stack_parameters" {
       <TR><TD PORT="ems_ref" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="194" HEIGHT="16">ems_ref</TD></TR></TABLE></TD><TD PORT="ems_ref.type" ALIGN="LEFT">text[2147483647]</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
-    URL="tables/orchestration_stack_parameters.html"
+    URL="../../tables/orchestration_stack_parameters.html"
     target="_top"
     tooltip="orchestration_stack_parameters"
   ];

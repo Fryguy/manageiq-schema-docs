@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf site/*
+docker run --rm -it -p 5432:5432 -v "$PWD/site:/output" -v "$PWD/schema.properties:/schemaspy.properties:ro" -v "$PWD/schemameta.xml:/schemameta.xml:ro" schemaspy/schemaspy "$@"
